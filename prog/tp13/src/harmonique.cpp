@@ -5,6 +5,9 @@
 #include <iostream>
 #include <math.h>
 
+/**
+* Génère une harmonique (onde sinusoïdale) de fréquence freq
+*/
 harmonique::harmonique(double freq) :
     producteur_base(1),
     m_freq(freq),
@@ -14,6 +17,9 @@ harmonique::harmonique(double freq) :
 
 }
 
+/**
+* Calcule la prochaine valeur de la vague.
+*/
 void harmonique::calculer()
 {
     double harm = sin((double)m_sample_counter / MixageSonore::frequency * 2 * MixageSonore::pi * m_freq + m_dephase);

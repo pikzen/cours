@@ -8,7 +8,14 @@
 class consommateur_base : virtual public consommateur
 {
 protected:
+	/**
+	* Nombre d'entrées sur ce consommateur
+	*/
 	unsigned int m_max_input;
+
+	/**
+	* Liste des entrées
+	*/
 	std::vector<counted_ptr<flot> > m_input;
 public:
     consommateur_base(unsigned int);

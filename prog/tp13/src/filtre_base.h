@@ -12,3 +12,5 @@ public:
 	virtual ~filtre_base() {}
 	virtual void calculer() = 0;
 };
+
+

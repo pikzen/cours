@@ -8,7 +8,14 @@
 class producteur_base : virtual public producteur
 {
 protected:
+	/**
+	* Nombre maximal de sorties
+	*/
 	unsigned int m_max_output;
+
+	/**
+	* Liste des sorties
+	*/
 	std::vector<counted_ptr<flot> > m_output;
 public:
 	producteur_base(unsigned int);

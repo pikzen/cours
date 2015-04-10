@@ -7,5 +7,6 @@ class multiplicateur : public filtre_base
 {   
 public:
     multiplicateur();
-    void calculer();
+    virtual ~multiplicateur() {};
+    virtual void calculer();
 };

@@ -6,8 +6,12 @@
 class signal_constant : public producteur_base
 {
 private:
+	/**
+	* Valeur à renvoyer à chaque fois.
+	*/
     double m_val;
 public:
     signal_constant(double);
-    void calculer();
+    virtual ~signal_constant() {};
+    virtual void calculer();
 };
