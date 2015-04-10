@@ -14,6 +14,7 @@
 #include "operation_binaire.h"
 #include "volume.h"
 #include "filtre_compose.h"
+#include "volume_compose.h"
 #include <functional>
 
 void
@@ -96,26 +97,18 @@ void q12_vol() {
 
 void q13_compose() {
     harmonique h1(110);
-    harmonique h2(4400);
-    volume     vol(0.2);
-    multiplicateur mul;
-    enregistreur_fichier enr("12_vol.raw", 1);
+    volume_compose vol(0.5);
+    vol.connecterEntree(h1.getSortie(0), 0);
 
-    filtre_compose compose(1, 1);
-    compose.connectAtEnd(h1);
-    compose.connectAtEnd(h2);
-    compose.connectAtEnd(vol);
-    compose.connectComposants(h1, 0, vol, 0);
-    compose.connectAtEnd(mul);
-    compose.connectComposants(mul, 1, h2, 0);
-    enr.connecterEntree(compose.getSortie(0), 0);
-
+    enregistreur_fichier enr("13_vol.raw", 1);
+    enr.connecterEntree(vol.getSortie(0), 0);
 
     for (unsigned long int i = 0; i < 2 * MixageSonore::frequency; ++i)
     {
-        compose.calculer();
+        h1.calculer();
+        vol.calculer();
+        enr.calculer();
     }
-
 }
 
 void q12_vol_noreduce() {

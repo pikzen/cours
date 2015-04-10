@@ -1,86 +1,45 @@
 #include "filtre_compose.h"
 
 filtre_compose::filtre_compose(unsigned int in, unsigned int out) :
-    m_max_input(in),
-    m_max_output(out)
+    filtre_base(in, out),
+    m_filters(),
+    m_dict()
 {
-
 }
 
-void filtre_compose::connectAtEnd(const counted_ptr<filtre>& fl, const int[] on_in, const int[] on_out)
+void filtre_compose::ajouterComposant(counted_ptr<composant> composant)
 {
-    if (m_filters.size() == 0)
-    {
-        m_filters.push_back(fl);
-        for (int i = 0; i < fl.nbEntrees(); i++)
-            fl.connecterEntree(m_input.get(i), on_in[i]);
-
-        return;
-    }
-
-    // Récupère les sorties du dernier composant et essaie de les connecter
-    // au nouveau composant.
-    counted_ptr<flot> last = m_filters.back();
-    if (last.nbSorties() > fl.nbEntrees())
-    {
-        // panic
-    }
-
-    for (int i = 0; i < last.nbSorties(); i++)
-        fl.connecterEntree(last.getSortie(i), on_in[i]);
-
-    if (fl.nbSorties() > m_max_output)
-    {
-        // panic
-    }
-
-    for (int i = 0; i < fl.nbSorties(); i++)
-        m_output[on_out[i]] = fl.getSortie(i);
-
-    m_filters.push_back(fl);
+    m_filters.push_back(composant);
 }
 
-void filtre_compose::connectComposants(composant& out, unsigned int outNum,
-                                       composant& in, unsigned int inNum)
+void filtre_compose::connecterEntree(const counted_ptr<flot>& cmp, unsigned int in)
 {
-    in.connecterEntree(out.getSortie(outNum), inNum);
+    if (m_dict.count(in) < 0) return;
+
+    m_dict[in].first->connecterEntree(cmp, m_dict[in].second);
+
+    consommateur_base::connecterEntree(cmp, in);
 }
 
+void filtre_compose::connecterEntreeInterne(counted_ptr<consommateur_base> cmp, unsigned int in, unsigned int inCmp)
+{
+    m_dict[in] = std::pair<counted_ptr<consommateur>, unsigned int>(cmp, inCmp);
+}
+
+void filtre_compose::connecterSortieInterne(counted_ptr<producteur_base> cmp, unsigned int out, unsigned int outCmp)
+{
+    m_output[out] = cmp->getSortie(outCmp);
+}
+
+void filtre_compose::connecterComposants(counted_ptr<producteur> prod, unsigned int outProd,
+                                         counted_ptr<consommateur> cons, unsigned int consProd)
+{
+    cons->connecterEntree(prod->getSortie(outProd), consProd);
+}
 void filtre_compose::calculer()
 {
-    for (int i = 0; i < m_filters.size(); i++)
-        m_filters[i].calculer();
-}
+    if (!yaDesEchantillons()) return;
 
-bool filtre_compose::yaDesEchantillons() const
-{
-    for (int i = 0; i < m_input.size(); i++)
-        if (m_input[i].vide()) return false;
-
-    return true;
-}
-
-void filtre_compose::connecterEntree(const counted_ptr<flot>& fl, unsigned int in)
-{
-    m_input[in] = fl;
-}
-
-const counted_ptr<flot>& filtre_compose::getEntree(unsigned int in) const
-{
-    return m_input[in];
-}
-
-const counted_ptr<flot>& filtre_compose::getSortie(unsigned int out) const
-{
-    return m_output[out];
-}
-
-unsigned int filtre_compose::nbEntrees() const
-{
-    return m_max_input;
-}
-
-unsigned int filtre_compose::nbSorties() const
-{
-    return m_max_output;
+    for (std::vector<counted_ptr<composant> >::iterator i = m_filters.begin(); i < m_filters.end(); i++)
+        (*i)->calculer();
 }

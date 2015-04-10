@@ -1,0 +1,1 @@
+g++ -Wall -I../include -g -c consommateur_base.cpp filtre_base.cpp filtre_compose.cpp harmonique.cpp imp_flot.cpp main.cpp multiplicateur.cpp operation_binaire.cpp producteur_base.cpp signal_constant.cpp volume.cpp

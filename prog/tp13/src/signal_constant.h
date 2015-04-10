@@ -1,16 +1,13 @@
 #pragma once
 
-#include "producteur.h"
+#include "producteur_base.h"
 #include "counted_ptr.h"
 
-class signal_constant : public producteur
+class signal_constant : public producteur_base
 {
 private:
-    counted_ptr<flot> m_sample;
     double m_val;
 public:
     signal_constant(double);
-    unsigned int nbSorties() const;
-    const counted_ptr<flot>& getSortie(unsigned int) const;
     void calculer();
 };

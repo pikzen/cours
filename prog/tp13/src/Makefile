@@ -1,5 +1,5 @@
-CC=g++
-CFLAGS=-Wall -I../include -g
+CC=g++-4.9
+CFLAGS=-Wall -I../include -g -fdiagnostics-color=always
 CLIBS=-L../lib -loutils
 LDFLAGS=
 SRC=$(wildcard *.cpp)

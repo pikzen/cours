@@ -2,28 +2,19 @@
 #include "filtre_base.h"
 #include "composant.h"
 #include <vector>
+#include <map>
 
 class filtre_compose : public filtre_base
 {
 private:
-    std::vector<composant> m_filters;
-    std::vector<counted_ptr<flot>> m_input;
-    std::vector<counted_ptr<flot>> m_output;
-    unsigned int m_max_input;
-    unsigned int m_max_output;
-
+    std::vector<counted_ptr<composant> > m_filters;
+    std::map<unsigned int, std::pair<counted_ptr<consommateur>, unsigned int> > m_dict;
 public:
     filtre_compose(unsigned int, unsigned int);
-    void connectAtEnd(const composant);
-    void connectComposants(composant out, unsigned int outNum, composant in,  unsigned int inNum);
+    void connecterComposants(counted_ptr<producteur>, unsigned int, counted_ptr<consommateur>,  unsigned int);
+    void ajouterComposant(counted_ptr<composant>);
+    void connecterSortieInterne(counted_ptr<producteur_base>, unsigned int, unsigned int);
+    void connecterEntreeInterne(counted_ptr<consommateur_base>, unsigned int, unsigned int);
+    void connecterEntree(const counted_ptr<flot>&, unsigned int);
     void calculer();
-
-    virtual unsigned int nbEntrees() const = 0;
-    virtual unsigned int nbSorties() const = 0;
-
-    virtual const counted_ptr<flot>& getSortie(unsigned int) const = 0;
-    virtual const counted_ptr<flot>& getEntree(unsigned int) const = 0;
-
-    virtual void connecterEntree(const counted_ptr<flot>&, unsigned int) = 0;
-    virtual bool yaDesEchantillons() const = 0;
-}
+};

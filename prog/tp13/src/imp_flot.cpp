@@ -14,8 +14,8 @@ void imp_flot::inserer(double sample)
 double imp_flot::extraire()
 {
     assert( !vide() );
-    double val = m_samples.back();
-    m_samples.pop_back();
+    double val = m_samples.front();
+    m_samples.pop_front();
 
     return val;
 }

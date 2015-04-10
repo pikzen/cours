@@ -2,15 +2,19 @@
 
 #include "producteur.h"
 #include "counted_ptr.h"
-#include <deque>
+#include <vector>
+#include "flot.h"
 
-class producteur_base : public producteur
+class producteur_base : virtual public producteur
 {
 protected:
-    virtual void connecterSortie(const counted_ptr<flot>&, unsigned int) = 0;
+	unsigned int m_max_output;
+	std::vector<counted_ptr<flot> > m_output;
 public:
+	producteur_base(unsigned int);
     virtual ~producteur_base() {}
-    virtual unsigned int nbSorties() const = 0;
-    virtual const counted_ptr<flot>& getSortie(unsigned int) const = 0;
+    virtual unsigned int nbSorties() const;
+    virtual const counted_ptr<flot> & getSortie(unsigned int numsortie) const;
     virtual void calculer() = 0;
+    virtual void connecterSortie(const counted_ptr<flot>&, unsigned int);
 };
