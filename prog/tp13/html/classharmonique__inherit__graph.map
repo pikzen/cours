@@ -1,0 +1,5 @@
+<map id="harmonique" name="harmonique">
+<area shape="rect" id="node2" href="$classproducteur__base.html" title="producteur_base" alt="" coords="5,155,123,181"/>
+<area shape="rect" id="node3" href="$classproducteur.html" title="Interface d&#39;un producteur d&#39;échantillons sonores. Il s&#39;agit d&#39;une interface décrivant un composant ne..." alt="" coords="23,80,104,107"/>
+<area shape="rect" id="node4" href="$classcomposant.html" title="Interface d&#39;un composant du systeme sonore. " alt="" coords="21,5,107,32"/>
+</map>

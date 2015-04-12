@@ -1,0 +1,110 @@
+\hypertarget{classimp__flot}{\section{imp\-\_\-flot Class Reference}
+\label{classimp__flot}\index{imp\-\_\-flot@{imp\-\_\-flot}}
+}
+
+
+{\ttfamily \#include $<$imp\-\_\-flot.\-h$>$}
+
+
+
+Inheritance diagram for imp\-\_\-flot\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classimp__flot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for imp\-\_\-flot\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classimp__flot__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimp__flot_ada159b4a27063c268afdcfefa0131e0f}{imp\-\_\-flot} ()
+\item 
+virtual \hyperlink{classimp__flot_ad402e050fd2277f24c92ae3105362b3a}{$\sim$imp\-\_\-flot} ()
+\item 
+virtual void \hyperlink{classimp__flot_ae8d3f81777edab07b0dccacc630e16e5}{inserer} (double)
+\item 
+virtual double \hyperlink{classimp__flot_ab3abbb6e555cbc62061bd6bcfda0050c}{extraire} ()
+\item 
+virtual bool \hyperlink{classimp__flot_a3757d33b984840955902ce982719e0f3}{vide} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::deque$<$ double $>$ \hyperlink{classimp__flot_a9ec261e7faf8e7c2e779b9a6feb22f08}{m\-\_\-samples}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classimp__flot_ada159b4a27063c268afdcfefa0131e0f}{\index{imp\-\_\-flot@{imp\-\_\-flot}!imp\-\_\-flot@{imp\-\_\-flot}}
+\index{imp\-\_\-flot@{imp\-\_\-flot}!imp_flot@{imp\-\_\-flot}}
+\subsubsection[{imp\-\_\-flot}]{\setlength{\rightskip}{0pt plus 5cm}imp\-\_\-flot\-::imp\-\_\-flot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classimp__flot_ada159b4a27063c268afdcfefa0131e0f}
+Simple flot de données \hypertarget{classimp__flot_ad402e050fd2277f24c92ae3105362b3a}{\index{imp\-\_\-flot@{imp\-\_\-flot}!$\sim$imp\-\_\-flot@{$\sim$imp\-\_\-flot}}
+\index{$\sim$imp\-\_\-flot@{$\sim$imp\-\_\-flot}!imp_flot@{imp\-\_\-flot}}
+\subsubsection[{$\sim$imp\-\_\-flot}]{\setlength{\rightskip}{0pt plus 5cm}virtual imp\-\_\-flot\-::$\sim$imp\-\_\-flot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classimp__flot_ad402e050fd2277f24c92ae3105362b3a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classimp__flot_ab3abbb6e555cbc62061bd6bcfda0050c}{\index{imp\-\_\-flot@{imp\-\_\-flot}!extraire@{extraire}}
+\index{extraire@{extraire}!imp_flot@{imp\-\_\-flot}}
+\subsubsection[{extraire}]{\setlength{\rightskip}{0pt plus 5cm}double imp\-\_\-flot\-::extraire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classimp__flot_ab3abbb6e555cbc62061bd6bcfda0050c}
+Extrait le sample à l'avant du flot et le supprime du flot. 
+
+Implements \hyperlink{classflot_a84b9830b712c4c96f052b04883c4fa80}{flot}.
+
+\hypertarget{classimp__flot_ae8d3f81777edab07b0dccacc630e16e5}{\index{imp\-\_\-flot@{imp\-\_\-flot}!inserer@{inserer}}
+\index{inserer@{inserer}!imp_flot@{imp\-\_\-flot}}
+\subsubsection[{inserer}]{\setlength{\rightskip}{0pt plus 5cm}void imp\-\_\-flot\-::inserer (
+\begin{DoxyParamCaption}
+\item[{double}]{sample}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classimp__flot_ae8d3f81777edab07b0dccacc630e16e5}
+Insère un sample dans le flot de données 
+
+Implements \hyperlink{classflot_a324d696c55f5b0f0b036f8069ffe7911}{flot}.
+
+\hypertarget{classimp__flot_a3757d33b984840955902ce982719e0f3}{\index{imp\-\_\-flot@{imp\-\_\-flot}!vide@{vide}}
+\index{vide@{vide}!imp_flot@{imp\-\_\-flot}}
+\subsubsection[{vide}]{\setlength{\rightskip}{0pt plus 5cm}bool imp\-\_\-flot\-::vide (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classimp__flot_a3757d33b984840955902ce982719e0f3}
+Vérifie si le flot contient encore des données 
+
+Implements \hyperlink{classflot_aa1dc8b1beedc87daedd4fc0f5354cbb6}{flot}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classimp__flot_a9ec261e7faf8e7c2e779b9a6feb22f08}{\index{imp\-\_\-flot@{imp\-\_\-flot}!m\-\_\-samples@{m\-\_\-samples}}
+\index{m\-\_\-samples@{m\-\_\-samples}!imp_flot@{imp\-\_\-flot}}
+\subsubsection[{m\-\_\-samples}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<$double$>$ imp\-\_\-flot\-::m\-\_\-samples\hspace{0.3cm}{\ttfamily [private]}}}\label{classimp__flot_a9ec261e7faf8e7c2e779b9a6feb22f08}
+Liste des samples 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{imp__flot_8h}{imp\-\_\-flot.\-h}\item 
+src/\hyperlink{imp__flot_8cpp}{imp\-\_\-flot.\-cpp}\end{DoxyCompactItemize}

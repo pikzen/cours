@@ -1,0 +1,118 @@
+\hypertarget{classproducteur}{\section{producteur Class Reference}
+\label{classproducteur}\index{producteur@{producteur}}
+}
+
+
+Interface d'un producteur d'échantillons sonores. Il s'agit d'une interface décrivant un composant ne possédant que des sorties.  
+
+
+
+
+{\ttfamily \#include $<$producteur.\-h$>$}
+
+
+
+Inheritance diagram for producteur\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproducteur__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for producteur\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classproducteur__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classproducteur_a267b3a02f994c02436b300ea9a25a817}{$\sim$producteur} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+virtual unsigned int \hyperlink{classproducteur_abd95dacd17daa4479f213c7455ce0058}{nb\-Sorties} () const =0
+\begin{DoxyCompactList}\small\item\em Nombre de sorties du composant. \end{DoxyCompactList}\item 
+virtual const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \& \hyperlink{classproducteur_a5673d0a0e8553ecf711e8338e4f6ab2e}{get\-Sortie} (unsigned int numsortie) const =0
+\begin{DoxyCompactList}\small\item\em Recupération d'une sortie du composant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface d'un producteur d'échantillons sonores. Il s'agit d'une interface décrivant un composant ne possédant que des sorties. 
+
+\begin{DoxyAuthor}{Author}
+Jean Christophe Engel, Fabrice Lamarche, University Of Rennes 1 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+23/04/2010 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classproducteur_a267b3a02f994c02436b300ea9a25a817}{\index{producteur@{producteur}!$\sim$producteur@{$\sim$producteur}}
+\index{$\sim$producteur@{$\sim$producteur}!producteur@{producteur}}
+\subsubsection[{$\sim$producteur}]{\setlength{\rightskip}{0pt plus 5cm}producteur\-::$\sim$producteur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classproducteur_a267b3a02f994c02436b300ea9a25a817}
+
+
+Destructeur virtuel. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classproducteur_a5673d0a0e8553ecf711e8338e4f6ab2e}{\index{producteur@{producteur}!get\-Sortie@{get\-Sortie}}
+\index{get\-Sortie@{get\-Sortie}!producteur@{producteur}}
+\subsubsection[{get\-Sortie}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \& producteur\-::get\-Sortie (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{numsortie}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classproducteur_a5673d0a0e8553ecf711e8338e4f6ab2e}
+
+
+Recupération d'une sortie du composant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numsortie} & Le numero de la sortie a recuperer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+0 $<$= numsortie $<$ \hyperlink{classproducteur_abd95dacd17daa4479f213c7455ce0058}{nb\-Sorties()} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+La sortie demandée. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classproducteur__base_a96c01a2773c11eb0859150fc3a8e8338}{producteur\-\_\-base}.
+
+\hypertarget{classproducteur_abd95dacd17daa4479f213c7455ce0058}{\index{producteur@{producteur}!nb\-Sorties@{nb\-Sorties}}
+\index{nb\-Sorties@{nb\-Sorties}!producteur@{producteur}}
+\subsubsection[{nb\-Sorties}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int producteur\-::nb\-Sorties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classproducteur_abd95dacd17daa4479f213c7455ce0058}
+
+
+Nombre de sorties du composant. 
+
+\begin{DoxyReturn}{Returns}
+Le nombre de sorties du composant. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classproducteur__base_ae5148ef791b0f3c393e45e08e08c6246}{producteur\-\_\-base}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{producteur_8h}{producteur.\-h}\end{DoxyCompactItemize}

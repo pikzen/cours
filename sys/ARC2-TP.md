@@ -1,0 +1,32 @@
+# ARC2, TP1
+===============================================================================
+
+## Le bus, cette magie
+Un processeur est composé d'une unité de contrôle, avec un compteur ordinal.
+Dans le cas d'un processeur sequentiel, toutes les instructions seront exclusives. Les informations sont tirées depuis la mémorie via le bus.
+Le processeur aura besoin d'aller chercher des informations à l'exterieur. 
+
+Schéma du siecle:
+
+```
++---------------|    |--------------------+
+| +------+      |  B |      +-----------+ |
+| | B&R  |<---->|  U |      |           | |
+| +------+      |  S |<---->|    CPU    | |
+| +------+      |    |      |           | |
+| | U.T  |<---->|    |      +-----------+ |
+| +------+      |    |                    |
++---------------|    |--------------------+
+                |    |
+                |    |  +---------------+
+                |    |  | Memory        |
+                |    |  +---------------+
+                ...
+```
+
+On utilise des bases d'adressage: la mémoire peut commencer à 0x0000, l'UT à 0x1000, etc. Ainsi, pour acceder à l'adresse 0x5 d'un élément, on adresse `adresse de l'élément + 0x5`. Mais cela ne suffit pas. 
+
+## TP
+
+Lecture de 320h
+320h <===> 0000 0011 0010 0000b

@@ -1,0 +1,231 @@
+\hypertarget{classenregistreur__fichier}{\section{enregistreur\-\_\-fichier Class Reference}
+\label{classenregistreur__fichier}\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}}
+}
+
+
+Un consommateur qui enregistre ses entrées dans un fichier binaire ; 44100 Hz, 16bits signé, entrelacé  
+
+
+
+
+{\ttfamily \#include $<$enregistreur\-\_\-fichier.\-h$>$}
+
+
+
+Inheritance diagram for enregistreur\-\_\-fichier\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classenregistreur__fichier__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for enregistreur\-\_\-fichier\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classenregistreur__fichier__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classenregistreur__fichier_ab8eb72e794d29c47dc3476259de2836c}{enregistreur\-\_\-fichier} (std\-::string nf, unsigned int nbc)
+\begin{DoxyCompactList}\small\item\em initialise le flux de sortie \end{DoxyCompactList}\item 
+virtual \hyperlink{classenregistreur__fichier_a34d78a6c1510f953ca2d66a2767e2dfd}{$\sim$enregistreur\-\_\-fichier} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. ; ferme le fichier. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classenregistreur__fichier_a46b864aea1016ecef695e085870706af}{nb\-Entrees} () const 
+\item 
+virtual const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \& \hyperlink{classenregistreur__fichier_a45c98f8a93f4f6b5ac733248769aebb5}{get\-Entree} (unsigned int numentree) const 
+\item 
+virtual void \hyperlink{classenregistreur__fichier_a3d8584ab625fab747cf8c01cc410362a}{connecter\-Entree} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \&f, unsigned int numentree)
+\begin{DoxyCompactList}\small\item\em Connecte une entrée sur ce composant. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classenregistreur__fichier_a1f20e9ef18665e9b3714d067b573a9de}{ya\-Des\-Echantillons} () const 
+\item 
+virtual void \hyperlink{classenregistreur__fichier_a3f123c156b96a9eec82bdec24962d597}{calculer} ()
+\begin{DoxyCompactList}\small\item\em Effectue les calculs associes au composant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\-::string \& \hyperlink{classenregistreur__fichier_a86ad2c3ffecb4f12f057e0d63e7bbb7f}{get\-Nom\-Fichier} () const 
+\item 
+std\-::ofstream \& \hyperlink{classenregistreur__fichier_a7781a7305c09f3777cbf96a0d06ddfb4}{get\-Stream} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classenregistreur__fichier_a18b256b717938088893ac6c836079428}{m\-\_\-nb\-E}
+\item 
+std\-::vector$<$ \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ $>$ \hyperlink{classenregistreur__fichier_a27e5d8ef895fc1bacf7dd20fe7532373}{m\-\_\-les\-Entrees}
+\item 
+std\-::string \hyperlink{classenregistreur__fichier_a2112179ea9e7bba0eb1cdbd8e627d695}{m\-\_\-nom\-Fichier}
+\item 
+std\-::ofstream \hyperlink{classenregistreur__fichier_a878b033faa126b12ad6080fe1a159c70}{m\-\_\-flux\-Sortie}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Un consommateur qui enregistre ses entrées dans un fichier binaire ; 44100 Hz, 16bits signé, entrelacé 
+
+\begin{DoxyAuthor}{Author}
+Jean Christophe Engel, Fabrice Lamarche, University Of Rennes 1 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+23/04/2010 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classenregistreur__fichier_ab8eb72e794d29c47dc3476259de2836c}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}}
+\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{enregistreur\-\_\-fichier}]{\setlength{\rightskip}{0pt plus 5cm}enregistreur\-\_\-fichier\-::enregistreur\-\_\-fichier (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{nf, }
+\item[{unsigned int}]{nbc}
+\end{DoxyParamCaption}
+)}}\label{classenregistreur__fichier_ab8eb72e794d29c47dc3476259de2836c}
+
+
+initialise le flux de sortie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nf} & \-: nom du fichier de sortie \\
+\hline
+{\em nbc} & \-: nombre de canaux (1 = mono, 2 = stéréo) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classenregistreur__fichier_a34d78a6c1510f953ca2d66a2767e2dfd}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!$\sim$enregistreur\-\_\-fichier@{$\sim$enregistreur\-\_\-fichier}}
+\index{$\sim$enregistreur\-\_\-fichier@{$\sim$enregistreur\-\_\-fichier}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{$\sim$enregistreur\-\_\-fichier}]{\setlength{\rightskip}{0pt plus 5cm}enregistreur\-\_\-fichier\-::$\sim$enregistreur\-\_\-fichier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classenregistreur__fichier_a34d78a6c1510f953ca2d66a2767e2dfd}
+
+
+Destructeur virtuel. ; ferme le fichier. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classenregistreur__fichier_a3f123c156b96a9eec82bdec24962d597}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!calculer@{calculer}}
+\index{calculer@{calculer}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{calculer}]{\setlength{\rightskip}{0pt plus 5cm}virtual void enregistreur\-\_\-fichier\-::calculer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classenregistreur__fichier_a3f123c156b96a9eec82bdec24962d597}
+
+
+Effectue les calculs associes au composant. 
+
+
+
+Implements \hyperlink{classcomposant_a257333d140850f51be479b025ce1e540}{composant}.
+
+\hypertarget{classenregistreur__fichier_a3d8584ab625fab747cf8c01cc410362a}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!connecter\-Entree@{connecter\-Entree}}
+\index{connecter\-Entree@{connecter\-Entree}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{connecter\-Entree}]{\setlength{\rightskip}{0pt plus 5cm}virtual void enregistreur\-\_\-fichier\-::connecter\-Entree (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \&}]{f, }
+\item[{unsigned int}]{numentree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classenregistreur__fichier_a3d8584ab625fab747cf8c01cc410362a}
+
+
+Connecte une entrée sur ce composant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Le flot à connecter en entrée du composant. \\
+\hline
+{\em numentree} & Le numéro de l'entree sur laquelle connecter le flot.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+0 $<$= numentree $<$ \hyperlink{classenregistreur__fichier_a46b864aea1016ecef695e085870706af}{nb\-Entrees()} 
+\end{DoxyPrecond}
+
+
+Implements \hyperlink{classconsommateur_a36b438c3e6c8e71989ec30441c821062}{consommateur}.
+
+\hypertarget{classenregistreur__fichier_a45c98f8a93f4f6b5ac733248769aebb5}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!get\-Entree@{get\-Entree}}
+\index{get\-Entree@{get\-Entree}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{get\-Entree}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf counted\-\_\-ptr}$<${\bf flot}$>$\& enregistreur\-\_\-fichier\-::get\-Entree (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{numentree}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classenregistreur__fichier_a45c98f8a93f4f6b5ac733248769aebb5}
+\begin{DoxyReturn}{Returns}
+L'entrée demandée. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classconsommateur_ab9d91275bf6355ffa417ceb379967af2}{consommateur}.
+
+\hypertarget{classenregistreur__fichier_a86ad2c3ffecb4f12f057e0d63e7bbb7f}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!get\-Nom\-Fichier@{get\-Nom\-Fichier}}
+\index{get\-Nom\-Fichier@{get\-Nom\-Fichier}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{get\-Nom\-Fichier}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& enregistreur\-\_\-fichier\-::get\-Nom\-Fichier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{classenregistreur__fichier_a86ad2c3ffecb4f12f057e0d63e7bbb7f}
+\hypertarget{classenregistreur__fichier_a7781a7305c09f3777cbf96a0d06ddfb4}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!get\-Stream@{get\-Stream}}
+\index{get\-Stream@{get\-Stream}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{get\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ofstream\& enregistreur\-\_\-fichier\-::get\-Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classenregistreur__fichier_a7781a7305c09f3777cbf96a0d06ddfb4}
+\hypertarget{classenregistreur__fichier_a46b864aea1016ecef695e085870706af}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!nb\-Entrees@{nb\-Entrees}}
+\index{nb\-Entrees@{nb\-Entrees}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{nb\-Entrees}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int enregistreur\-\_\-fichier\-::nb\-Entrees (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classenregistreur__fichier_a46b864aea1016ecef695e085870706af}
+\begin{DoxyReturn}{Returns}
+Le nombre d'entrees du composant. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classconsommateur_aa06328f3002f14b5ff83e393e7e4761a}{consommateur}.
+
+\hypertarget{classenregistreur__fichier_a1f20e9ef18665e9b3714d067b573a9de}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!ya\-Des\-Echantillons@{ya\-Des\-Echantillons}}
+\index{ya\-Des\-Echantillons@{ya\-Des\-Echantillons}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{ya\-Des\-Echantillons}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool enregistreur\-\_\-fichier\-::ya\-Des\-Echantillons (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classenregistreur__fichier_a1f20e9ef18665e9b3714d067b573a9de}
+\begin{DoxyReturn}{Returns}
+Vrai si chaque entrée possède au moins un échantillon. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classconsommateur_a8622fe9e8e5baa1a7b152fce88b8be89}{consommateur}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classenregistreur__fichier_a878b033faa126b12ad6080fe1a159c70}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!m\-\_\-flux\-Sortie@{m\-\_\-flux\-Sortie}}
+\index{m\-\_\-flux\-Sortie@{m\-\_\-flux\-Sortie}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{m\-\_\-flux\-Sortie}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ofstream enregistreur\-\_\-fichier\-::m\-\_\-flux\-Sortie\hspace{0.3cm}{\ttfamily [private]}}}\label{classenregistreur__fichier_a878b033faa126b12ad6080fe1a159c70}
+\hypertarget{classenregistreur__fichier_a27e5d8ef895fc1bacf7dd20fe7532373}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!m\-\_\-les\-Entrees@{m\-\_\-les\-Entrees}}
+\index{m\-\_\-les\-Entrees@{m\-\_\-les\-Entrees}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{m\-\_\-les\-Entrees}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf counted\-\_\-ptr}$<${\bf flot}$>$ $>$ enregistreur\-\_\-fichier\-::m\-\_\-les\-Entrees\hspace{0.3cm}{\ttfamily [private]}}}\label{classenregistreur__fichier_a27e5d8ef895fc1bacf7dd20fe7532373}
+\hypertarget{classenregistreur__fichier_a18b256b717938088893ac6c836079428}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!m\-\_\-nb\-E@{m\-\_\-nb\-E}}
+\index{m\-\_\-nb\-E@{m\-\_\-nb\-E}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{m\-\_\-nb\-E}]{\setlength{\rightskip}{0pt plus 5cm}int enregistreur\-\_\-fichier\-::m\-\_\-nb\-E\hspace{0.3cm}{\ttfamily [private]}}}\label{classenregistreur__fichier_a18b256b717938088893ac6c836079428}
+\hypertarget{classenregistreur__fichier_a2112179ea9e7bba0eb1cdbd8e627d695}{\index{enregistreur\-\_\-fichier@{enregistreur\-\_\-fichier}!m\-\_\-nom\-Fichier@{m\-\_\-nom\-Fichier}}
+\index{m\-\_\-nom\-Fichier@{m\-\_\-nom\-Fichier}!enregistreur_fichier@{enregistreur\-\_\-fichier}}
+\subsubsection[{m\-\_\-nom\-Fichier}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string enregistreur\-\_\-fichier\-::m\-\_\-nom\-Fichier\hspace{0.3cm}{\ttfamily [private]}}}\label{classenregistreur__fichier_a2112179ea9e7bba0eb1cdbd8e627d695}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{enregistreur__fichier_8h}{enregistreur\-\_\-fichier.\-h}\end{DoxyCompactItemize}

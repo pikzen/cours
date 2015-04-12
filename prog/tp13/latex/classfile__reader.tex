@@ -1,0 +1,95 @@
+\hypertarget{classfile__reader}{\section{file\-\_\-reader Class Reference}
+\label{classfile__reader}\index{file\-\_\-reader@{file\-\_\-reader}}
+}
+
+
+{\ttfamily \#include $<$file\-\_\-reader.\-h$>$}
+
+
+
+Inheritance diagram for file\-\_\-reader\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classfile__reader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for file\-\_\-reader\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classfile__reader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfile__reader_ad044fe1536ebee72e77fdd2973300dda}{file\-\_\-reader} (char $\ast$, unsigned int)
+\item 
+virtual \hyperlink{classfile__reader_a86aa8bf64bad02300e177401f8da6aee}{$\sim$file\-\_\-reader} ()
+\item 
+virtual void \hyperlink{classfile__reader_ac63890e9fbb85cda005efbce47f83648}{calculer} ()
+\begin{DoxyCompactList}\small\item\em Effectue les calculs associes au composant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ifstream \hyperlink{classfile__reader_aa7f6d7d6b00fe7e0524db94b2a279c8c}{m\-\_\-handle}
+\item 
+unsigned int \hyperlink{classfile__reader_a3dfaa67bb8ea591695eb1eecfdea4cde}{m\-\_\-canals}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfile__reader_ad044fe1536ebee72e77fdd2973300dda}{\index{file\-\_\-reader@{file\-\_\-reader}!file\-\_\-reader@{file\-\_\-reader}}
+\index{file\-\_\-reader@{file\-\_\-reader}!file_reader@{file\-\_\-reader}}
+\subsubsection[{file\-\_\-reader}]{\setlength{\rightskip}{0pt plus 5cm}file\-\_\-reader\-::file\-\_\-reader (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{unsigned int}]{canals}
+\end{DoxyParamCaption}
+)}}\label{classfile__reader_ad044fe1536ebee72e77fdd2973300dda}
+Lit un fichier et fournit son contenu sous forme de flot filename est le nom du fichier à lire canals est le nombre de canaux du fichier (1\-: mono, 2\-: stereo) \hypertarget{classfile__reader_a86aa8bf64bad02300e177401f8da6aee}{\index{file\-\_\-reader@{file\-\_\-reader}!$\sim$file\-\_\-reader@{$\sim$file\-\_\-reader}}
+\index{$\sim$file\-\_\-reader@{$\sim$file\-\_\-reader}!file_reader@{file\-\_\-reader}}
+\subsubsection[{$\sim$file\-\_\-reader}]{\setlength{\rightskip}{0pt plus 5cm}virtual file\-\_\-reader\-::$\sim$file\-\_\-reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classfile__reader_a86aa8bf64bad02300e177401f8da6aee}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classfile__reader_ac63890e9fbb85cda005efbce47f83648}{\index{file\-\_\-reader@{file\-\_\-reader}!calculer@{calculer}}
+\index{calculer@{calculer}!file_reader@{file\-\_\-reader}}
+\subsubsection[{calculer}]{\setlength{\rightskip}{0pt plus 5cm}void file\-\_\-reader\-::calculer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfile__reader_ac63890e9fbb85cda005efbce47f83648}
+
+
+Effectue les calculs associes au composant. 
+
+
+
+Implements \hyperlink{classproducteur__base_af1e171c9e69b0998d5124c7389737f82}{producteur\-\_\-base}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classfile__reader_a3dfaa67bb8ea591695eb1eecfdea4cde}{\index{file\-\_\-reader@{file\-\_\-reader}!m\-\_\-canals@{m\-\_\-canals}}
+\index{m\-\_\-canals@{m\-\_\-canals}!file_reader@{file\-\_\-reader}}
+\subsubsection[{m\-\_\-canals}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int file\-\_\-reader\-::m\-\_\-canals\hspace{0.3cm}{\ttfamily [private]}}}\label{classfile__reader_a3dfaa67bb8ea591695eb1eecfdea4cde}
+Nombre de canaux dans ce fichier \hypertarget{classfile__reader_aa7f6d7d6b00fe7e0524db94b2a279c8c}{\index{file\-\_\-reader@{file\-\_\-reader}!m\-\_\-handle@{m\-\_\-handle}}
+\index{m\-\_\-handle@{m\-\_\-handle}!file_reader@{file\-\_\-reader}}
+\subsubsection[{m\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ifstream file\-\_\-reader\-::m\-\_\-handle\hspace{0.3cm}{\ttfamily [private]}}}\label{classfile__reader_aa7f6d7d6b00fe7e0524db94b2a279c8c}
+Handle vers le fichier à lire 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{file__reader_8h}{file\-\_\-reader.\-h}\item 
+src/\hyperlink{file__reader_8cpp}{file\-\_\-reader.\-cpp}\end{DoxyCompactItemize}

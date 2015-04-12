@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pikzen/cours/prog/TP12Ferry/src/ambulance.cc
+ambulance.h
+/home/pikzen/cours/prog/TP12Ferry/src/ambulance.h
+
+/home/pikzen/cours/prog/TP12Ferry/src/ambulance.h
+auto.h
+/home/pikzen/cours/prog/TP12Ferry/src/auto.h
+
+/home/pikzen/cours/prog/TP12Ferry/src/auto.h
+vehicule.h
+/home/pikzen/cours/prog/TP12Ferry/src/vehicule.h
+
+/home/pikzen/cours/prog/TP12Ferry/src/vehicule.h
+iostream
+-
+

@@ -1,0 +1,133 @@
+\hypertarget{classconsommateur__base}{\section{consommateur\-\_\-base Class Reference}
+\label{classconsommateur__base}\index{consommateur\-\_\-base@{consommateur\-\_\-base}}
+}
+
+
+{\ttfamily \#include $<$consommateur\-\_\-base.\-h$>$}
+
+
+
+Inheritance diagram for consommateur\-\_\-base\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classconsommateur__base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for consommateur\-\_\-base\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classconsommateur__base__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classconsommateur__base_a3a96b41f2a05573c8be4a820462f73dc}{consommateur\-\_\-base} (unsigned int)
+\item 
+virtual \hyperlink{classconsommateur__base_a8c5da6cd2134ad9cc76a8d8ddf303b91}{$\sim$consommateur\-\_\-base} ()
+\item 
+virtual unsigned int \hyperlink{classconsommateur__base_a71244a18e367c260320ab220c416d83a}{nb\-Entrees} () const 
+\item 
+virtual const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \& \hyperlink{classconsommateur__base_aaa04503aa9b028729a0dbaf0d5a6d63c}{get\-Entree} (unsigned int) const 
+\item 
+virtual void \hyperlink{classconsommateur__base_a273d1899ba7e05e8651b4cca6aa35b1d}{connecter\-Entree} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \&, unsigned int)
+\item 
+virtual bool \hyperlink{classconsommateur__base_a19f135d483c30324526d63c18a536f36}{ya\-Des\-Echantillons} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classconsommateur__base_af75625bb7dc752ff9aa173c6aff50059}{m\-\_\-max\-\_\-input}
+\item 
+std\-::vector$<$ \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ $>$ \hyperlink{classconsommateur__base_a061094bb0041f748ff88d94b1e503087}{m\-\_\-input}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classconsommateur__base_a3a96b41f2a05573c8be4a820462f73dc}{\index{consommateur\-\_\-base@{consommateur\-\_\-base}!consommateur\-\_\-base@{consommateur\-\_\-base}}
+\index{consommateur\-\_\-base@{consommateur\-\_\-base}!consommateur_base@{consommateur\-\_\-base}}
+\subsubsection[{consommateur\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}consommateur\-\_\-base\-::consommateur\-\_\-base (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{nb\-Out}
+\end{DoxyParamCaption}
+)}}\label{classconsommateur__base_a3a96b41f2a05573c8be4a820462f73dc}
+Construit un consommateur avec nb\-Out sorties \hypertarget{classconsommateur__base_a8c5da6cd2134ad9cc76a8d8ddf303b91}{\index{consommateur\-\_\-base@{consommateur\-\_\-base}!$\sim$consommateur\-\_\-base@{$\sim$consommateur\-\_\-base}}
+\index{$\sim$consommateur\-\_\-base@{$\sim$consommateur\-\_\-base}!consommateur_base@{consommateur\-\_\-base}}
+\subsubsection[{$\sim$consommateur\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}virtual consommateur\-\_\-base\-::$\sim$consommateur\-\_\-base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classconsommateur__base_a8c5da6cd2134ad9cc76a8d8ddf303b91}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classconsommateur__base_a273d1899ba7e05e8651b4cca6aa35b1d}{\index{consommateur\-\_\-base@{consommateur\-\_\-base}!connecter\-Entree@{connecter\-Entree}}
+\index{connecter\-Entree@{connecter\-Entree}!consommateur_base@{consommateur\-\_\-base}}
+\subsubsection[{connecter\-Entree}]{\setlength{\rightskip}{0pt plus 5cm}void consommateur\-\_\-base\-::connecter\-Entree (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \&}]{fl, }
+\item[{unsigned int}]{nb\-In}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classconsommateur__base_a273d1899ba7e05e8651b4cca6aa35b1d}
+Connecte un flot fl à l'entrée nb\-In 
+
+Implements \hyperlink{classconsommateur_a36b438c3e6c8e71989ec30441c821062}{consommateur}.
+
+
+
+Reimplemented in \hyperlink{classfiltre__compose_aaf4dc84a41236fb7f462d6eba569baf1}{filtre\-\_\-compose}, and \hyperlink{classvolume_a5ee6dc194dc9d47c9d554a4f94ac0512}{volume}.
+
+\hypertarget{classconsommateur__base_aaa04503aa9b028729a0dbaf0d5a6d63c}{\index{consommateur\-\_\-base@{consommateur\-\_\-base}!get\-Entree@{get\-Entree}}
+\index{get\-Entree@{get\-Entree}!consommateur_base@{consommateur\-\_\-base}}
+\subsubsection[{get\-Entree}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \& consommateur\-\_\-base\-::get\-Entree (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{nb\-Out}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classconsommateur__base_aaa04503aa9b028729a0dbaf0d5a6d63c}
+Récupère le flot à l'entrée nb\-Out 
+
+Implements \hyperlink{classconsommateur_ab9d91275bf6355ffa417ceb379967af2}{consommateur}.
+
+\hypertarget{classconsommateur__base_a71244a18e367c260320ab220c416d83a}{\index{consommateur\-\_\-base@{consommateur\-\_\-base}!nb\-Entrees@{nb\-Entrees}}
+\index{nb\-Entrees@{nb\-Entrees}!consommateur_base@{consommateur\-\_\-base}}
+\subsubsection[{nb\-Entrees}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int consommateur\-\_\-base\-::nb\-Entrees (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classconsommateur__base_a71244a18e367c260320ab220c416d83a}
+Renvoie le nombre d'entrées de ce consommateur 
+
+Implements \hyperlink{classconsommateur_aa06328f3002f14b5ff83e393e7e4761a}{consommateur}.
+
+\hypertarget{classconsommateur__base_a19f135d483c30324526d63c18a536f36}{\index{consommateur\-\_\-base@{consommateur\-\_\-base}!ya\-Des\-Echantillons@{ya\-Des\-Echantillons}}
+\index{ya\-Des\-Echantillons@{ya\-Des\-Echantillons}!consommateur_base@{consommateur\-\_\-base}}
+\subsubsection[{ya\-Des\-Echantillons}]{\setlength{\rightskip}{0pt plus 5cm}bool consommateur\-\_\-base\-::ya\-Des\-Echantillons (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classconsommateur__base_a19f135d483c30324526d63c18a536f36}
+Le flot possède-\/t-\/il des échantillons 
+
+Implements \hyperlink{classconsommateur_a8622fe9e8e5baa1a7b152fce88b8be89}{consommateur}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classconsommateur__base_a061094bb0041f748ff88d94b1e503087}{\index{consommateur\-\_\-base@{consommateur\-\_\-base}!m\-\_\-input@{m\-\_\-input}}
+\index{m\-\_\-input@{m\-\_\-input}!consommateur_base@{consommateur\-\_\-base}}
+\subsubsection[{m\-\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf counted\-\_\-ptr}$<${\bf flot}$>$ $>$ consommateur\-\_\-base\-::m\-\_\-input\hspace{0.3cm}{\ttfamily [protected]}}}\label{classconsommateur__base_a061094bb0041f748ff88d94b1e503087}
+Liste des entrées \hypertarget{classconsommateur__base_af75625bb7dc752ff9aa173c6aff50059}{\index{consommateur\-\_\-base@{consommateur\-\_\-base}!m\-\_\-max\-\_\-input@{m\-\_\-max\-\_\-input}}
+\index{m\-\_\-max\-\_\-input@{m\-\_\-max\-\_\-input}!consommateur_base@{consommateur\-\_\-base}}
+\subsubsection[{m\-\_\-max\-\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int consommateur\-\_\-base\-::m\-\_\-max\-\_\-input\hspace{0.3cm}{\ttfamily [protected]}}}\label{classconsommateur__base_af75625bb7dc752ff9aa173c6aff50059}
+Nombre d'entrées sur ce consommateur 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{consommateur__base_8h}{consommateur\-\_\-base.\-h}\item 
+src/\hyperlink{consommateur__base_8cpp}{consommateur\-\_\-base.\-cpp}\end{DoxyCompactItemize}

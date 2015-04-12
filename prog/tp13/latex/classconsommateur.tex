@@ -1,0 +1,166 @@
+\hypertarget{classconsommateur}{\section{consommateur Class Reference}
+\label{classconsommateur}\index{consommateur@{consommateur}}
+}
+
+
+Interface d'un consommateur d'échantillons sonores. Il s'agit d'une interface décrivant un composant qui ne possède que des entrées.  
+
+
+
+
+{\ttfamily \#include $<$consommateur.\-h$>$}
+
+
+
+Inheritance diagram for consommateur\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classconsommateur__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for consommateur\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classconsommateur__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classconsommateur_a9a756f15381056cd7917a8022d405251}{$\sim$consommateur} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+virtual unsigned int \hyperlink{classconsommateur_aa06328f3002f14b5ff83e393e7e4761a}{nb\-Entrees} () const =0
+\begin{DoxyCompactList}\small\item\em Renvoie le nombre d'entrees du composant. \end{DoxyCompactList}\item 
+virtual const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \& \hyperlink{classconsommateur_ab9d91275bf6355ffa417ceb379967af2}{get\-Entree} (unsigned int numentree) const =0
+\begin{DoxyCompactList}\small\item\em Récupération d'une entrée du composant. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classconsommateur_a36b438c3e6c8e71989ec30441c821062}{connecter\-Entree} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \&f, unsigned int numentree)=0
+\begin{DoxyCompactList}\small\item\em Connecte une entrée sur ce composant. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classconsommateur_a8622fe9e8e5baa1a7b152fce88b8be89}{ya\-Des\-Echantillons} () const =0
+\begin{DoxyCompactList}\small\item\em déterminer si chaque entrée possède au moins un échantillon \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface d'un consommateur d'échantillons sonores. Il s'agit d'une interface décrivant un composant qui ne possède que des entrées. 
+
+\begin{DoxyAuthor}{Author}
+Jean Christophe Engel, Fabrice Lamarche, University Of Rennes 1 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+23/04/2010 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classconsommateur_a9a756f15381056cd7917a8022d405251}{\index{consommateur@{consommateur}!$\sim$consommateur@{$\sim$consommateur}}
+\index{$\sim$consommateur@{$\sim$consommateur}!consommateur@{consommateur}}
+\subsubsection[{$\sim$consommateur}]{\setlength{\rightskip}{0pt plus 5cm}consommateur\-::$\sim$consommateur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classconsommateur_a9a756f15381056cd7917a8022d405251}
+
+
+Destructeur virtuel. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classconsommateur_a36b438c3e6c8e71989ec30441c821062}{\index{consommateur@{consommateur}!connecter\-Entree@{connecter\-Entree}}
+\index{connecter\-Entree@{connecter\-Entree}!consommateur@{consommateur}}
+\subsubsection[{connecter\-Entree}]{\setlength{\rightskip}{0pt plus 5cm}void consommateur\-::connecter\-Entree (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \&}]{f, }
+\item[{unsigned int}]{numentree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classconsommateur_a36b438c3e6c8e71989ec30441c821062}
+
+
+Connecte une entrée sur ce composant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Le flot à connecter en entrée du composant. \\
+\hline
+{\em numentree} & Le numéro de l'entree sur laquelle connecter le flot. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+0 $<$= numentree $<$ \hyperlink{classconsommateur_aa06328f3002f14b5ff83e393e7e4761a}{nb\-Entrees()} 
+\end{DoxyPrecond}
+
+
+Implemented in \hyperlink{classenregistreur__fichier__texte_a9da917c48db3891e757d971e8927dfda}{enregistreur\-\_\-fichier\-\_\-texte}, \hyperlink{classenregistreur__fichier_a3d8584ab625fab747cf8c01cc410362a}{enregistreur\-\_\-fichier}, \hyperlink{classconsommateur__base_a273d1899ba7e05e8651b4cca6aa35b1d}{consommateur\-\_\-base}, \hyperlink{classfiltre__compose_aaf4dc84a41236fb7f462d6eba569baf1}{filtre\-\_\-compose}, and \hyperlink{classvolume_a5ee6dc194dc9d47c9d554a4f94ac0512}{volume}.
+
+\hypertarget{classconsommateur_ab9d91275bf6355ffa417ceb379967af2}{\index{consommateur@{consommateur}!get\-Entree@{get\-Entree}}
+\index{get\-Entree@{get\-Entree}!consommateur@{consommateur}}
+\subsubsection[{get\-Entree}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \& consommateur\-::get\-Entree (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{numentree}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classconsommateur_ab9d91275bf6355ffa417ceb379967af2}
+
+
+Récupération d'une entrée du composant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numentree} & Le numero de l'entrée à récuperer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+0 $<$= numentree $<$ \hyperlink{classconsommateur_aa06328f3002f14b5ff83e393e7e4761a}{nb\-Entrees()} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+L'entrée demandée. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classenregistreur__fichier__texte_a065dcf79e74d6d7388dbb2909c0d2be2}{enregistreur\-\_\-fichier\-\_\-texte}, \hyperlink{classenregistreur__fichier_a45c98f8a93f4f6b5ac733248769aebb5}{enregistreur\-\_\-fichier}, and \hyperlink{classconsommateur__base_aaa04503aa9b028729a0dbaf0d5a6d63c}{consommateur\-\_\-base}.
+
+\hypertarget{classconsommateur_aa06328f3002f14b5ff83e393e7e4761a}{\index{consommateur@{consommateur}!nb\-Entrees@{nb\-Entrees}}
+\index{nb\-Entrees@{nb\-Entrees}!consommateur@{consommateur}}
+\subsubsection[{nb\-Entrees}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int consommateur\-::nb\-Entrees (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classconsommateur_aa06328f3002f14b5ff83e393e7e4761a}
+
+
+Renvoie le nombre d'entrees du composant. 
+
+\begin{DoxyReturn}{Returns}
+Le nombre d'entrees du composant. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classenregistreur__fichier__texte_a0f686274b3cca79fba1d3c2227cd4950}{enregistreur\-\_\-fichier\-\_\-texte}, \hyperlink{classenregistreur__fichier_a46b864aea1016ecef695e085870706af}{enregistreur\-\_\-fichier}, and \hyperlink{classconsommateur__base_a71244a18e367c260320ab220c416d83a}{consommateur\-\_\-base}.
+
+\hypertarget{classconsommateur_a8622fe9e8e5baa1a7b152fce88b8be89}{\index{consommateur@{consommateur}!ya\-Des\-Echantillons@{ya\-Des\-Echantillons}}
+\index{ya\-Des\-Echantillons@{ya\-Des\-Echantillons}!consommateur@{consommateur}}
+\subsubsection[{ya\-Des\-Echantillons}]{\setlength{\rightskip}{0pt plus 5cm}bool consommateur\-::ya\-Des\-Echantillons (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classconsommateur_a8622fe9e8e5baa1a7b152fce88b8be89}
+
+
+déterminer si chaque entrée possède au moins un échantillon 
+
+\begin{DoxyReturn}{Returns}
+Vrai si chaque entrée possède au moins un échantillon. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classenregistreur__fichier__texte_ac412238ca34c019727aa6ddfbe9ae56e}{enregistreur\-\_\-fichier\-\_\-texte}, \hyperlink{classenregistreur__fichier_a1f20e9ef18665e9b3714d067b573a9de}{enregistreur\-\_\-fichier}, and \hyperlink{classconsommateur__base_a19f135d483c30324526d63c18a536f36}{consommateur\-\_\-base}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{consommateur_8h}{consommateur.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,13 @@
+<map id="filtre" name="filtre">
+<area shape="rect" id="node5" href="$classfiltre__base.html" title="filtre_base" alt="" coords="327,229,408,256"/>
+<area shape="rect" id="node2" href="$classproducteur.html" title="Interface d&#39;un producteur d&#39;échantillons sonores. Il s&#39;agit d&#39;une interface décrivant un composant ne..." alt="" coords="267,80,348,107"/>
+<area shape="rect" id="node3" href="$classcomposant.html" title="Interface d&#39;un composant du systeme sonore. " alt="" coords="325,5,411,32"/>
+<area shape="rect" id="node4" href="$classconsommateur.html" title="Interface d&#39;un consommateur d&#39;échantillons sonores. Il s&#39;agit d&#39;une interface décrivant un composant ..." alt="" coords="374,80,481,107"/>
+<area shape="rect" id="node6" href="$classfiltre__compose.html" title="filtre_compose" alt="" coords="113,304,220,331"/>
+<area shape="rect" id="node10" href="$classmultiplicateur.html" title="multiplicateur" alt="" coords="244,304,343,331"/>
+<area shape="rect" id="node11" href="$classoperation__binaire.html" title="operation_binaire\&lt; T \&gt;" alt="" coords="367,304,517,331"/>
+<area shape="rect" id="node12" href="$classvolume.html" title="volume" alt="" coords="543,304,607,331"/>
+<area shape="rect" id="node7" href="$classmixer__element.html" title="mixer_element" alt="" coords="5,379,112,405"/>
+<area shape="rect" id="node8" href="$classmixeur.html" title="mixeur" alt="" coords="136,379,197,405"/>
+<area shape="rect" id="node9" href="$classvolume__compose.html" title="volume_compose" alt="" coords="222,379,345,405"/>
+</map>

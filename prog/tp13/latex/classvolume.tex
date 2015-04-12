@@ -1,0 +1,104 @@
+\hypertarget{classvolume}{\section{volume Class Reference}
+\label{classvolume}\index{volume@{volume}}
+}
+
+
+{\ttfamily \#include $<$volume.\-h$>$}
+
+
+
+Inheritance diagram for volume\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classvolume__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for volume\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classvolume__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvolume_a94d2ba725bfa08519d625e0bee5445d9}{volume} (double)
+\item 
+virtual \hyperlink{classvolume_ae5872ddf030fb8f9667f3443937cfd2f}{$\sim$volume} ()
+\item 
+virtual void \hyperlink{classvolume_aab5a1f0490ea8b5826db6edd78e90f1d}{calculer} ()
+\item 
+virtual void \hyperlink{classvolume_a5ee6dc194dc9d47c9d554a4f94ac0512}{connecter\-Entree} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \&, unsigned int)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmultiplicateur}{multiplicateur} \hyperlink{classvolume_a882a7cff6324a567d4295239811be846}{m\-\_\-mul}
+\item 
+\hyperlink{classsignal__constant}{signal\-\_\-constant} \hyperlink{classvolume_af992e96f1c1aedd23a4a9ef5f13eb726}{m\-\_\-vol}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classvolume_a94d2ba725bfa08519d625e0bee5445d9}{\index{volume@{volume}!volume@{volume}}
+\index{volume@{volume}!volume@{volume}}
+\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}volume\-::volume (
+\begin{DoxyParamCaption}
+\item[{double}]{factor}
+\end{DoxyParamCaption}
+)}}\label{classvolume_a94d2ba725bfa08519d625e0bee5445d9}
+Permet de modifier le volume en le multipliant avec un signal constant \hypertarget{classvolume_ae5872ddf030fb8f9667f3443937cfd2f}{\index{volume@{volume}!$\sim$volume@{$\sim$volume}}
+\index{$\sim$volume@{$\sim$volume}!volume@{volume}}
+\subsubsection[{$\sim$volume}]{\setlength{\rightskip}{0pt plus 5cm}virtual volume\-::$\sim$volume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classvolume_ae5872ddf030fb8f9667f3443937cfd2f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classvolume_aab5a1f0490ea8b5826db6edd78e90f1d}{\index{volume@{volume}!calculer@{calculer}}
+\index{calculer@{calculer}!volume@{volume}}
+\subsubsection[{calculer}]{\setlength{\rightskip}{0pt plus 5cm}void volume\-::calculer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classvolume_aab5a1f0490ea8b5826db6edd78e90f1d}
+Calcule la prochaine valeur (volume diminué) 
+
+Implements \hyperlink{classfiltre__base_ad06f5db1f851e5ad8655c9d8927cf347}{filtre\-\_\-base}.
+
+\hypertarget{classvolume_a5ee6dc194dc9d47c9d554a4f94ac0512}{\index{volume@{volume}!connecter\-Entree@{connecter\-Entree}}
+\index{connecter\-Entree@{connecter\-Entree}!volume@{volume}}
+\subsubsection[{connecter\-Entree}]{\setlength{\rightskip}{0pt plus 5cm}void volume\-::connecter\-Entree (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \&}]{fl, }
+\item[{unsigned int}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classvolume_a5ee6dc194dc9d47c9d554a4f94ac0512}
+Connecte une entrée au composant en lui appliquant le volume 
+
+Reimplemented from \hyperlink{classconsommateur__base_a273d1899ba7e05e8651b4cca6aa35b1d}{consommateur\-\_\-base}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classvolume_a882a7cff6324a567d4295239811be846}{\index{volume@{volume}!m\-\_\-mul@{m\-\_\-mul}}
+\index{m\-\_\-mul@{m\-\_\-mul}!volume@{volume}}
+\subsubsection[{m\-\_\-mul}]{\setlength{\rightskip}{0pt plus 5cm}{\bf multiplicateur} volume\-::m\-\_\-mul\hspace{0.3cm}{\ttfamily [private]}}}\label{classvolume_a882a7cff6324a567d4295239811be846}
+Multiplicateur permettant d'appliquer le volume \hypertarget{classvolume_af992e96f1c1aedd23a4a9ef5f13eb726}{\index{volume@{volume}!m\-\_\-vol@{m\-\_\-vol}}
+\index{m\-\_\-vol@{m\-\_\-vol}!volume@{volume}}
+\subsubsection[{m\-\_\-vol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf signal\-\_\-constant} volume\-::m\-\_\-vol\hspace{0.3cm}{\ttfamily [private]}}}\label{classvolume_af992e96f1c1aedd23a4a9ef5f13eb726}
+Facteur de volume (uniquement descendant) 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{volume_8h}{volume.\-h}\item 
+src/\hyperlink{volume_8cpp}{volume.\-cpp}\end{DoxyCompactItemize}

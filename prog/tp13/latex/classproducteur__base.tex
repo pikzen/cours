@@ -1,0 +1,133 @@
+\hypertarget{classproducteur__base}{\section{producteur\-\_\-base Class Reference}
+\label{classproducteur__base}\index{producteur\-\_\-base@{producteur\-\_\-base}}
+}
+
+
+{\ttfamily \#include $<$producteur\-\_\-base.\-h$>$}
+
+
+
+Inheritance diagram for producteur\-\_\-base\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproducteur__base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for producteur\-\_\-base\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classproducteur__base__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classproducteur__base_a0c2c488d98b77585e49b98d347910025}{producteur\-\_\-base} (unsigned int)
+\item 
+virtual \hyperlink{classproducteur__base_adc64c1151262d68209a09dea21c1ee58}{$\sim$producteur\-\_\-base} ()
+\item 
+virtual unsigned int \hyperlink{classproducteur__base_ae5148ef791b0f3c393e45e08e08c6246}{nb\-Sorties} () const 
+\item 
+virtual const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \& \hyperlink{classproducteur__base_a96c01a2773c11eb0859150fc3a8e8338}{get\-Sortie} (unsigned int numsortie) const 
+\item 
+virtual void \hyperlink{classproducteur__base_af1e171c9e69b0998d5124c7389737f82}{calculer} ()=0
+\begin{DoxyCompactList}\small\item\em Effectue les calculs associes au composant. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classproducteur__base_ad24519c3b05f7371ee15a9a402dc0717}{connecter\-Sortie} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \&, unsigned int)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classproducteur__base_a6439bb4131b4644839f11849568d36fc}{m\-\_\-max\-\_\-output}
+\item 
+std\-::vector$<$ \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ $>$ \hyperlink{classproducteur__base_abc5c0041e6ff23ce7a5c03ee7b9daf53}{m\-\_\-output}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classproducteur__base_a0c2c488d98b77585e49b98d347910025}{\index{producteur\-\_\-base@{producteur\-\_\-base}!producteur\-\_\-base@{producteur\-\_\-base}}
+\index{producteur\-\_\-base@{producteur\-\_\-base}!producteur_base@{producteur\-\_\-base}}
+\subsubsection[{producteur\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}producteur\-\_\-base\-::producteur\-\_\-base (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{outputs}
+\end{DoxyParamCaption}
+)}}\label{classproducteur__base_a0c2c488d98b77585e49b98d347910025}
+Représente un producteur simple Possède outputs sorties \hypertarget{classproducteur__base_adc64c1151262d68209a09dea21c1ee58}{\index{producteur\-\_\-base@{producteur\-\_\-base}!$\sim$producteur\-\_\-base@{$\sim$producteur\-\_\-base}}
+\index{$\sim$producteur\-\_\-base@{$\sim$producteur\-\_\-base}!producteur_base@{producteur\-\_\-base}}
+\subsubsection[{$\sim$producteur\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}virtual producteur\-\_\-base\-::$\sim$producteur\-\_\-base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classproducteur__base_adc64c1151262d68209a09dea21c1ee58}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classproducteur__base_af1e171c9e69b0998d5124c7389737f82}{\index{producteur\-\_\-base@{producteur\-\_\-base}!calculer@{calculer}}
+\index{calculer@{calculer}!producteur_base@{producteur\-\_\-base}}
+\subsubsection[{calculer}]{\setlength{\rightskip}{0pt plus 5cm}virtual void producteur\-\_\-base\-::calculer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classproducteur__base_af1e171c9e69b0998d5124c7389737f82}
+
+
+Effectue les calculs associes au composant. 
+
+
+
+Implements \hyperlink{classcomposant_a257333d140850f51be479b025ce1e540}{composant}.
+
+
+
+Implemented in \hyperlink{classoperation__binaire_a2ecfa3c6c05006c5c1bc285281bc6f3a}{operation\-\_\-binaire$<$ T $>$}, \hyperlink{classharmonique_a4dbd729dfa443204d9834effbb63d816}{harmonique}, \hyperlink{classfiltre__compose_a6fd1598c04300da43989af4f87a37aba}{filtre\-\_\-compose}, \hyperlink{classvolume_aab5a1f0490ea8b5826db6edd78e90f1d}{volume}, \hyperlink{classfile__reader_ac63890e9fbb85cda005efbce47f83648}{file\-\_\-reader}, \hyperlink{classsignal__constant_a18edd9db48afa7b287ae363bdcd91d43}{signal\-\_\-constant}, \hyperlink{classfiltre__base_ad06f5db1f851e5ad8655c9d8927cf347}{filtre\-\_\-base}, and \hyperlink{classmultiplicateur_ab22f15668247a10a35f027bd503f2442}{multiplicateur}.
+
+\hypertarget{classproducteur__base_ad24519c3b05f7371ee15a9a402dc0717}{\index{producteur\-\_\-base@{producteur\-\_\-base}!connecter\-Sortie@{connecter\-Sortie}}
+\index{connecter\-Sortie@{connecter\-Sortie}!producteur_base@{producteur\-\_\-base}}
+\subsubsection[{connecter\-Sortie}]{\setlength{\rightskip}{0pt plus 5cm}void producteur\-\_\-base\-::connecter\-Sortie (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \&}]{fl, }
+\item[{unsigned int}]{nb\-Out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classproducteur__base_ad24519c3b05f7371ee15a9a402dc0717}
+Connecte le flot fl à la sortie nb\-Out \hypertarget{classproducteur__base_a96c01a2773c11eb0859150fc3a8e8338}{\index{producteur\-\_\-base@{producteur\-\_\-base}!get\-Sortie@{get\-Sortie}}
+\index{get\-Sortie@{get\-Sortie}!producteur_base@{producteur\-\_\-base}}
+\subsubsection[{get\-Sortie}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \& producteur\-\_\-base\-::get\-Sortie (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{numsortie}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classproducteur__base_a96c01a2773c11eb0859150fc3a8e8338}
+Renvoie la sortie numsortie 
+
+Implements \hyperlink{classproducteur_a5673d0a0e8553ecf711e8338e4f6ab2e}{producteur}.
+
+\hypertarget{classproducteur__base_ae5148ef791b0f3c393e45e08e08c6246}{\index{producteur\-\_\-base@{producteur\-\_\-base}!nb\-Sorties@{nb\-Sorties}}
+\index{nb\-Sorties@{nb\-Sorties}!producteur_base@{producteur\-\_\-base}}
+\subsubsection[{nb\-Sorties}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int producteur\-\_\-base\-::nb\-Sorties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classproducteur__base_ae5148ef791b0f3c393e45e08e08c6246}
+Renvoie le nombre de sorties de ce producteur 
+
+Implements \hyperlink{classproducteur_abd95dacd17daa4479f213c7455ce0058}{producteur}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classproducteur__base_a6439bb4131b4644839f11849568d36fc}{\index{producteur\-\_\-base@{producteur\-\_\-base}!m\-\_\-max\-\_\-output@{m\-\_\-max\-\_\-output}}
+\index{m\-\_\-max\-\_\-output@{m\-\_\-max\-\_\-output}!producteur_base@{producteur\-\_\-base}}
+\subsubsection[{m\-\_\-max\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int producteur\-\_\-base\-::m\-\_\-max\-\_\-output\hspace{0.3cm}{\ttfamily [protected]}}}\label{classproducteur__base_a6439bb4131b4644839f11849568d36fc}
+Nombre maximal de sorties \hypertarget{classproducteur__base_abc5c0041e6ff23ce7a5c03ee7b9daf53}{\index{producteur\-\_\-base@{producteur\-\_\-base}!m\-\_\-output@{m\-\_\-output}}
+\index{m\-\_\-output@{m\-\_\-output}!producteur_base@{producteur\-\_\-base}}
+\subsubsection[{m\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf counted\-\_\-ptr}$<${\bf flot}$>$ $>$ producteur\-\_\-base\-::m\-\_\-output\hspace{0.3cm}{\ttfamily [protected]}}}\label{classproducteur__base_abc5c0041e6ff23ce7a5c03ee7b9daf53}
+Liste des sorties 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{producteur__base_8h}{producteur\-\_\-base.\-h}\item 
+src/\hyperlink{producteur__base_8cpp}{producteur\-\_\-base.\-cpp}\end{DoxyCompactItemize}

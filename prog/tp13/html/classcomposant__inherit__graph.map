@@ -1,0 +1,20 @@
+<map id="composant" name="composant">
+<area shape="rect" id="node2" href="$classconsommateur.html" title="Interface d&#39;un consommateur d&#39;échantillons sonores. Il s&#39;agit d&#39;une interface décrivant un composant ..." alt="" coords="142,115,250,141"/>
+<area shape="rect" id="node15" href="$classproducteur.html" title="Interface d&#39;un producteur d&#39;échantillons sonores. Il s&#39;agit d&#39;une interface décrivant un composant ne..." alt="" coords="155,173,237,200"/>
+<area shape="rect" id="node3" href="$classconsommateur__base.html" title="consommateur_base" alt="" coords="299,5,442,32"/>
+<area shape="rect" id="node12" href="$classenregistreur__fichier.html" title="Un consommateur qui enregistre ses entrées dans un fichier binaire ; 44100 Hz, 16bits signé..." alt="" coords="305,56,437,83"/>
+<area shape="rect" id="node13" href="$classenregistreur__fichier__texte.html" title="Un consommateur qui enregistre ses entrées dans un fichier texte ; une ligne = un échantillon de chaq..." alt="" coords="305,107,437,149"/>
+<area shape="rect" id="node14" href="$classfiltre.html" title="Interface associée à un filtre sonore. Ce filtre est considéré comme un producteur / consommateur d&#39;é..." alt="" coords="347,173,394,200"/>
+<area shape="rect" id="node4" href="$classfiltre__base.html" title="filtre_base" alt="" coords="507,148,589,175"/>
+<area shape="rect" id="node5" href="$classfiltre__compose.html" title="filtre_compose" alt="" coords="676,72,783,99"/>
+<area shape="rect" id="node9" href="$classmultiplicateur.html" title="multiplicateur" alt="" coords="680,123,779,149"/>
+<area shape="rect" id="node10" href="$classoperation__binaire.html" title="operation_binaire\&lt; T \&gt;" alt="" coords="654,173,805,200"/>
+<area shape="rect" id="node11" href="$classvolume.html" title="volume" alt="" coords="697,224,761,251"/>
+<area shape="rect" id="node6" href="$classmixer__element.html" title="mixer_element" alt="" coords="863,21,969,48"/>
+<area shape="rect" id="node7" href="$classmixeur.html" title="mixeur" alt="" coords="885,72,947,99"/>
+<area shape="rect" id="node8" href="$classvolume__compose.html" title="volume_compose" alt="" coords="854,123,978,149"/>
+<area shape="rect" id="node16" href="$classproducteur__base.html" title="producteur_base" alt="" coords="311,224,430,251"/>
+<area shape="rect" id="node17" href="$classfile__reader.html" title="file_reader" alt="" coords="507,199,589,225"/>
+<area shape="rect" id="node18" href="$classharmonique.html" title="harmonique" alt="" coords="503,249,593,276"/>
+<area shape="rect" id="node19" href="$classsignal__constant.html" title="signal_constant" alt="" coords="491,300,605,327"/>
+</map>

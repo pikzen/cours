@@ -1,0 +1,125 @@
+\hypertarget{classflot}{\section{flot Class Reference}
+\label{classflot}\index{flot@{flot}}
+}
+
+
+Interface associee a un flot de donnees reliant deux composants du systeme.  
+
+
+
+
+{\ttfamily \#include $<$flot.\-h$>$}
+
+
+
+Inheritance diagram for flot\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classflot__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classflot_ae73ea3f5f51ae0994305f85fba4f80da}{$\sim$flot} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classflot_a324d696c55f5b0f0b036f8069ffe7911}{inserer} (double echantillon)=0
+\begin{DoxyCompactList}\small\item\em Insertion d'un echantillon dans le flot. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classflot_a84b9830b712c4c96f052b04883c4fa80}{extraire} ()=0
+\begin{DoxyCompactList}\small\item\em Extraction de l'echantillon situe en tete du flot. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classflot_aa1dc8b1beedc87daedd4fc0f5354cbb6}{vide} () const =0
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le flot est vide ou non. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface associee a un flot de donnees reliant deux composants du systeme. 
+
+\begin{DoxyAuthor}{Author}
+Jean Christophe Engel, Fabrice Lamarche, University Of Rennes 1 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+23/04/2010 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classflot_ae73ea3f5f51ae0994305f85fba4f80da}{\index{flot@{flot}!$\sim$flot@{$\sim$flot}}
+\index{$\sim$flot@{$\sim$flot}!flot@{flot}}
+\subsubsection[{$\sim$flot}]{\setlength{\rightskip}{0pt plus 5cm}flot\-::$\sim$flot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classflot_ae73ea3f5f51ae0994305f85fba4f80da}
+
+
+Destructeur virtuel. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classflot_a84b9830b712c4c96f052b04883c4fa80}{\index{flot@{flot}!extraire@{extraire}}
+\index{extraire@{extraire}!flot@{flot}}
+\subsubsection[{extraire}]{\setlength{\rightskip}{0pt plus 5cm}double flot\-::extraire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classflot_a84b9830b712c4c96f052b04883c4fa80}
+
+
+Extraction de l'echantillon situe en tete du flot. 
+
+\begin{DoxyPrecond}{Precondition}
+!vide() 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+L'echantillon en tete de flot. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classimp__flot_ab3abbb6e555cbc62061bd6bcfda0050c}{imp\-\_\-flot}.
+
+\hypertarget{classflot_a324d696c55f5b0f0b036f8069ffe7911}{\index{flot@{flot}!inserer@{inserer}}
+\index{inserer@{inserer}!flot@{flot}}
+\subsubsection[{inserer}]{\setlength{\rightskip}{0pt plus 5cm}void flot\-::inserer (
+\begin{DoxyParamCaption}
+\item[{double}]{echantillon}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classflot_a324d696c55f5b0f0b036f8069ffe7911}
+
+
+Insertion d'un echantillon dans le flot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em echantillon} & L'echantillon a inserer dans le flot. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classimp__flot_ae8d3f81777edab07b0dccacc630e16e5}{imp\-\_\-flot}.
+
+\hypertarget{classflot_aa1dc8b1beedc87daedd4fc0f5354cbb6}{\index{flot@{flot}!vide@{vide}}
+\index{vide@{vide}!flot@{flot}}
+\subsubsection[{vide}]{\setlength{\rightskip}{0pt plus 5cm}bool flot\-::vide (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classflot_aa1dc8b1beedc87daedd4fc0f5354cbb6}
+
+
+Permet de savoir si le flot est vide ou non. 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le flot est vide, faux sinon. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classimp__flot_a3757d33b984840955902ce982719e0f3}{imp\-\_\-flot}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{flot_8h}{flot.\-h}\end{DoxyCompactItemize}

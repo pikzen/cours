@@ -1,0 +1,63 @@
+Test Partie 1
+=============
+10
+
+Liste de réels   : <1.1:5.5:4.4:3.3:2.2:1.1:2.2:3.3:4.4:5.5:>
+Liste de chaînes : <B:FFFFF:EEEE:DDD:CC:B:CC:DDD:EEEE:FFFFF:>
+
+Test Partie 2 (const_itérateur)
+===============================
+
+Liste            : <FFFFF EEEE DDD CC B CC DDD EEEE FFFFF B >
+Test Opérateur ->: <5 : 4 : 3 : 2 : 1 : 2 : 3 : 4 : 5 : 1 : >
+
+Test Partie 2.5  (itérateur)
+============================
+10
+
+Liste            : <5.5 4.4 3.3 2.2 1.1 2.2 3.3 4.4 5.5 1.1 >
+Liste modifiée   : <30.25 19.36 10.89 4.84 1.21 4.84 10.89 19.36 30.25 1.21 >
+
+Test Partie 3 (find, insert, erase)
+===================================
+
+Vous allez devoir saisir une suite de nombres, terminée par une valeur finale.
+Saisissez d'abord la valeur finale : 
+Saisissez chaque nombre (x) de la suite : 
+  - si x > 0, x sera cherché dans la liste :
+     - si x est présent, x sera ajouté en tête de liste
+     - si x est absent,  x sera ajouté en fin  de liste
+  - si x < 0, -x sera cherché dans la liste :
+     - si -x est présent, il sera supprimé de la liste
+     - si -x est absent,  x  sera ajouté en tête de liste
+La saisie du nombre 0 vide la liste de son contenu
+
+Liste initiale
+<>
+
+Liste triée
+<>
+
+ajout de quelques éléments
+<1515 1984 -314.159 >
+
+Test Partie 4 (cdc, opérateurs =, + et <<)
+==========================================
+
+Liste initiale		: <1515 1984 -314.159 >Liste triée		: <1984 -314.159 1515 >Copie de la précédente	: <1984 -314.159 1515 >
+Saisir deux valeurs	: 
+Liste initiale modifiée	: <10 1515 1984 10 -314.159 >Liste triée		: <10 1984 -314.159 10 1515 >Copie triée modifiée	: <10 1984 -314.159 10 1515 >
+Concaténation (listeTriee + listeInitiale + copie)
+<10 1984 -314.159 10 1515 > + <10 1515 1984 10 -314.159 > + <10 1984 -314.159 10 1515 > = <-314.159 10 1515 10 1515 1984 10 -314.159 10 10 1984 -314.159 10 1515 1984 >
+remplacer la première liste par la liste concaténée
+<10 1515 10 1515 1984 10 -314.159 10 10 1984 -314.159 10 1515 1984 -314.159 >
+Test Partie 4 (cdc, opérateurs =, + et <<)
+==========================================
+
+Liste initiale		: <FFFFF EEEE DDD CC B CC DDD EEEE FFFFF B >Liste triée		: <EEEE EEEE DDD DDD CC CC B B FFFFF FFFFF >Copie de la précédente	: <EEEE EEEE DDD DDD CC CC B B FFFFF FFFFF >
+Saisir deux valeurs	: 
+Liste initiale modifiée	: <10 FFFFF EEEE DDD CC B CC DDD EEEE FFFFF 10 B >Liste triée		: <10 EEEE EEEE DDD DDD CC CC B B FFFFF 10 FFFFF >Copie triée modifiée	: <10 EEEE EEEE DDD DDD CC CC B B FFFFF 10 FFFFF >
+Concaténation (listeTriee + listeInitiale + copie)
+<10 EEEE EEEE DDD DDD CC CC B B FFFFF 10 FFFFF > + <10 FFFFF EEEE DDD CC B CC DDD EEEE FFFFF 10 B > + <10 EEEE EEEE DDD DDD CC CC B B FFFFF 10 FFFFF > = <EEEE DDD DDD CC CC B B FFFFF 10 FFFFF 10 FFFFF EEEE DDD CC B CC DDD EEEE FFFFF 10 B 10 10 EEEE EEEE DDD DDD CC CC B B FFFFF 10 FFFFF EEEE >
+remplacer la première liste par la liste concaténée
+<DDD DDD CC CC B B FFFFF 10 FFFFF 10 FFFFF EEEE DDD CC B CC DDD EEEE FFFFF 10 B 10 10 EEEE EEEE DDD DDD CC CC B B FFFFF 10 FFFFF EEEE EEEE >

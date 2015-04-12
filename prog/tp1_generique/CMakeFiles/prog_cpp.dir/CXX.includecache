@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pikzen/prog-cpp/tp1_generique/main.cpp
+iostream
+-
+vecteur.h
+/home/pikzen/prog-cpp/tp1_generique/vecteur.h
+
+/home/pikzen/prog-cpp/tp1_generique/vecteur.cpp
+cassert
+-
+iostream
+-
+vecteur.h
+/home/pikzen/prog-cpp/tp1_generique/vecteur.h
+math.h
+/home/pikzen/prog-cpp/tp1_generique/math.h
+
+/home/pikzen/prog-cpp/tp1_generique/vecteur.h
+math.h
+-
+ostream
+-
+istream
+-
+assert.h
+-
+

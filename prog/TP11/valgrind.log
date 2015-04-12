@@ -1,0 +1,306 @@
+==31148== Memcheck, a memory error detector
+==31148== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==31148== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==31148== Command: ./tests
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x405AC6: DataStructure::cyclicNode<double>::next() const (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x405675: Liste<double>::empty() const (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D30: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e138 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x405496: DataStructure::cyclicNode<double>::previous() const (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x405692: Liste<double>::empty() const (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D30: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e130 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x406394: DataStructure::cyclicNode<double>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x405BD3: DataStructure::cyclicNode<double>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40574B: DataStructure::cyclicNode<double>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D4C: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e130 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x40639B: DataStructure::cyclicNode<double>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x405BD3: DataStructure::cyclicNode<double>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40574B: DataStructure::cyclicNode<double>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D4C: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e138 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid write of size 8
+==31148==    at 0x40639F: DataStructure::cyclicNode<double>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x405BD3: DataStructure::cyclicNode<double>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40574B: DataStructure::cyclicNode<double>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D4C: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e138 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x4063A7: DataStructure::cyclicNode<double>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x405BD3: DataStructure::cyclicNode<double>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40574B: DataStructure::cyclicNode<double>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D4C: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e138 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x4063AF: DataStructure::cyclicNode<double>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x405BD3: DataStructure::cyclicNode<double>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40574B: DataStructure::cyclicNode<double>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D4C: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e130 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid write of size 8
+==31148==    at 0x4063B2: DataStructure::cyclicNode<double>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x405BD3: DataStructure::cyclicNode<double>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40574B: DataStructure::cyclicNode<double>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D4C: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e130 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid write of size 8
+==31148==    at 0x405BDC: DataStructure::cyclicNode<double>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40574B: DataStructure::cyclicNode<double>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D4C: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e130 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid write of size 8
+==31148==    at 0x405BE7: DataStructure::cyclicNode<double>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40574B: DataStructure::cyclicNode<double>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404D4C: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e138 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid free() / delete / delete[] / realloc()
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404532: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1e130 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404D54: Liste<double>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404519: void testPartie4<double>(Liste<double>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E07: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x406420: DataStructure::cyclicNode<std::string>::next() const (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x4057EF: Liste<std::string>::empty() const (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DDA: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f698 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x4055E0: DataStructure::cyclicNode<std::string>::previous() const (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40580C: Liste<std::string>::empty() const (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DDA: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f690 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x4063F0: DataStructure::cyclicNode<std::string>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40643D: DataStructure::cyclicNode<std::string>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x4058C5: DataStructure::cyclicNode<std::string>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DF6: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f690 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x4063F7: DataStructure::cyclicNode<std::string>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40643D: DataStructure::cyclicNode<std::string>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x4058C5: DataStructure::cyclicNode<std::string>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DF6: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f698 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid write of size 8
+==31148==    at 0x4063FB: DataStructure::cyclicNode<std::string>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40643D: DataStructure::cyclicNode<std::string>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x4058C5: DataStructure::cyclicNode<std::string>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DF6: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f698 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x406403: DataStructure::cyclicNode<std::string>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40643D: DataStructure::cyclicNode<std::string>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x4058C5: DataStructure::cyclicNode<std::string>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DF6: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f698 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x40640B: DataStructure::cyclicNode<std::string>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40643D: DataStructure::cyclicNode<std::string>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x4058C5: DataStructure::cyclicNode<std::string>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DF6: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f690 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid write of size 8
+==31148==    at 0x40640E: DataStructure::cyclicNode<std::string>::lightDetach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40643D: DataStructure::cyclicNode<std::string>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x4058C5: DataStructure::cyclicNode<std::string>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DF6: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f690 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid write of size 8
+==31148==    at 0x406446: DataStructure::cyclicNode<std::string>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x4058C5: DataStructure::cyclicNode<std::string>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DF6: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f690 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid write of size 8
+==31148==    at 0x406451: DataStructure::cyclicNode<std::string>::detach() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x4058C5: DataStructure::cyclicNode<std::string>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DF6: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f698 is 8 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid read of size 8
+==31148==    at 0x4EF14C0: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==31148==    by 0x4058D5: DataStructure::cyclicNode<std::string>::~cyclicNode() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404DF6: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f6a0 is 16 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== Invalid free() / delete / delete[] / realloc()
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x404898: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==  Address 0x5a1f690 is 0 bytes inside a block of size 24 free'd
+==31148==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31148==    by 0x404DFE: Liste<std::string>::~Liste() (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x40487F: void testPartie4<std::string>(Liste<std::string>*) (in /home/pikzen/prog-cpp/TP11/tests)
+==31148==    by 0x403E13: main (in /home/pikzen/prog-cpp/TP11/tests)
+==31148== 
+==31148== 
+==31148== HEAP SUMMARY:
+==31148==     in use at exit: 1,530 bytes in 64 blocks
+==31148==   total heap usage: 267 allocs, 205 frees, 6,495 bytes allocated
+==31148== 
+==31148== LEAK SUMMARY:
+==31148==    definitely lost: 112 bytes in 6 blocks
+==31148==    indirectly lost: 1,418 bytes in 58 blocks
+==31148==      possibly lost: 0 bytes in 0 blocks
+==31148==    still reachable: 0 bytes in 0 blocks
+==31148==         suppressed: 0 bytes in 0 blocks
+==31148== Rerun with --leak-check=full to see details of leaked memory
+==31148== 
+==31148== For counts of detected and suppressed errors, rerun with: -v
+==31148== ERROR SUMMARY: 23 errors from 23 contexts (suppressed: 0 from 0)

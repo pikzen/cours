@@ -1,0 +1,13 @@
+<map id="src/imp_flot.h" name="src/imp_flot.h">
+<area shape="rect" id="node2" href="$consommateur__base_8cpp.html" title="src/consommateur_base.cpp" alt="" coords="5,80,195,107"/>
+<area shape="rect" id="node3" href="$harmonique_8cpp.html" title="src/harmonique.cpp" alt="" coords="220,80,355,107"/>
+<area shape="rect" id="node4" href="$imp__flot_8cpp.html" title="src/imp_flot.cpp" alt="" coords="380,80,495,107"/>
+<area shape="rect" id="node5" href="$operation__binaire_8h.html" title="src/operation_binaire.h" alt="" coords="519,80,672,107"/>
+<area shape="rect" id="node8" href="$mixeur_8cpp.html" title="src/mixeur.cpp" alt="" coords="697,80,804,107"/>
+<area shape="rect" id="node9" href="$multiplicateur_8cpp.html" title="src/multiplicateur.cpp" alt="" coords="829,80,973,107"/>
+<area shape="rect" id="node10" href="$producteur__base_8cpp.html" title="src/producteur_base.cpp" alt="" coords="999,80,1163,107"/>
+<area shape="rect" id="node11" href="$signal__constant_8cpp.html" title="src/signal_constant.cpp" alt="" coords="1188,80,1347,107"/>
+<area shape="rect" id="node12" href="$volume_8cpp.html" title="src/volume.cpp" alt="" coords="1373,80,1483,107"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="471,155,568,181"/>
+<area shape="rect" id="node7" href="$mixer__element_8cpp.html" title="src/mixer_element.cpp" alt="" coords="593,155,747,181"/>
+</map>

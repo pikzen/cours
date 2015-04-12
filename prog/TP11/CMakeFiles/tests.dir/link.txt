@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -Wall -fno-elide-constructors    CMakeFiles/tests.dir/main.cpp.o  -o tests -rdynamic 

@@ -1,0 +1,369 @@
+g++ -pthread -Wall -fno-elide-constructors -isystem "google_test/include/" vecteur.h vecteur.cpp test_vecteur.cc
+vecteur.cpp: In constructor ‘Vecteur::Vecteur(int, float)’:
+vecteur.cpp:18:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = 0; i < dim; i++) m_values[i] = baseVal;
+                               ^
+vecteur.cpp: In copy constructor ‘Vecteur::Vecteur(const Vecteur&)’:
+vecteur.cpp:27:47: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = 0; i < copy.dimensions(); i++) {
+                                               ^
+vecteur.cpp: In function ‘void afficherVecteur(const Vecteur*)’:
+vecteur.cpp:70:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = 0; i < dim; i++)
+                               ^
+vecteur.cpp: In function ‘Vecteur* lireVecteur()’:
+vecteur.cpp:85:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = 0; i < dim; i++)
+                               ^
+vecteur.cpp: In function ‘Vecteur add(const Vecteur*, const Vecteur*)’:
+vecteur.cpp:101:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = 0; i < v1->dimensions() && i < v2->dimensions(); i++) {
+                                              ^
+vecteur.cpp:101:70: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = 0; i < v1->dimensions() && i < v2->dimensions(); i++) {
+                                                                      ^
+vecteur.cpp:106:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = minDim; i < maxDim; i++) {
+                                    ^
+vecteur.cpp: In function ‘float operator*(const Vecteur&, const Vecteur&)’:
+vecteur.cpp:135:47: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = 0; i < vec1.dimensions(); i++)
+                                               ^
+vecteur.cpp: In function ‘std::ostream& operator<<(std::ostream&, const Vecteur&)’:
+vecteur.cpp:150:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = 0; i < dim; i++)
+                               ^
+vecteur.cpp: In function ‘std::istream& operator>>(std::istream&, Vecteur&)’:
+vecteur.cpp:164:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (unsigned int i = 0; i < vec.dimensions(); i++)
+                                              ^
+vecteur.cpp:159:6: warning: unused variable ‘dim’ [-Wunused-variable]
+  int dim = 0;
+      ^
+test_vecteur.cc: In function ‘void check_vectors_equality(const Vecteur&, const Vecteur&)’:
+test_vecteur.cc:42:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (unsigned int i = 0; i < v1.dimensions(); ++i) {
+                                              ^
+/tmp/ccX8rIQ0.o: In function `check_dim_values_with_get(Vecteur const&, unsigned int, float)':
+test_vecteur.cc:(.text+0x57): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0x7f): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0xac): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0xbf): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0xcb): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x158): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0x180): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x1ad): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x1c0): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x1cc): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x23c): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x2ac): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `check_dim_values_with_get(Vecteur const&, unsigned int, float*)':
+test_vecteur.cc:(.text+0x33a): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0x362): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x38f): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x3a2): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x3ae): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x449): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0x471): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x49e): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x4b1): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x4bd): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x52d): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x59d): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `check_dim_values_with_opr(Vecteur const&, unsigned int, float)':
+test_vecteur.cc:(.text+0x62c): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0x654): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x681): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x694): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x6a0): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x72d): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0x755): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x782): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x795): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x7a1): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x811): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x881): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `check_dim_values_with_opr(Vecteur const&, unsigned int, float*)':
+test_vecteur.cc:(.text+0x90f): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0x937): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x964): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x977): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x983): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0xa1e): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0xa46): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0xa73): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0xa86): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0xa92): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0xb02): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0xb72): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `check_vectors_equality(Vecteur const&, Vecteur const&)':
+test_vecteur.cc:(.text+0xc0c): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0xc34): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0xc61): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0xc74): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0xc80): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0xd29): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0xd51): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0xd7e): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0xd91): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0xd9d): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0xe1b): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0xe8b): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_assertConstructeur_Test::TestBody()':
+test_vecteur.cc:(.text+0xfac): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0xffe): undefined reference to `testing::internal::DeathTest::Create(char const*, testing::internal::RE const*, char const*, int, testing::internal::DeathTest**)'
+test_vecteur.cc:(.text+0x1098): undefined reference to `testing::internal::ExitedUnsuccessfully(int)'
+test_vecteur.cc:(.text+0x10da): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0x1172): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x118c): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x1191): undefined reference to `testing::internal::DeathTest::LastMessage()'
+test_vecteur.cc:(.text+0x11b5): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x11ce): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x11dd): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x1271): undefined reference to `testing::internal::FormatFileLocation(char const*, int)'
+test_vecteur.cc:(.text+0x1357): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x1374): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_assertGet_Test::TestBody()':
+test_vecteur.cc:(.text+0x13f7): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0x1449): undefined reference to `testing::internal::DeathTest::Create(char const*, testing::internal::RE const*, char const*, int, testing::internal::DeathTest**)'
+test_vecteur.cc:(.text+0x14e3): undefined reference to `testing::internal::ExitedUnsuccessfully(int)'
+test_vecteur.cc:(.text+0x1522): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0x15a6): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x15c2): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x15c7): undefined reference to `testing::internal::DeathTest::LastMessage()'
+test_vecteur.cc:(.text+0x15eb): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x1604): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x1613): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x16c7): undefined reference to `testing::internal::FormatFileLocation(char const*, int)'
+test_vecteur.cc:(.text+0x17ad): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x17c1): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_assertSet_Test::TestBody()':
+test_vecteur.cc:(.text+0x19b3): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0x1a05): undefined reference to `testing::internal::DeathTest::Create(char const*, testing::internal::RE const*, char const*, int, testing::internal::DeathTest**)'
+test_vecteur.cc:(.text+0x1a9f): undefined reference to `testing::internal::ExitedUnsuccessfully(int)'
+test_vecteur.cc:(.text+0x1ade): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0x1b6a): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x1b86): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x1b8b): undefined reference to `testing::internal::DeathTest::LastMessage()'
+test_vecteur.cc:(.text+0x1baf): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x1bc8): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x1bd7): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x1c8b): undefined reference to `testing::internal::FormatFileLocation(char const*, int)'
+test_vecteur.cc:(.text+0x1d71): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x1d85): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q9ProduitScalaire_Test::TestBody()':
+test_vecteur.cc:(.text+0x39e3): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text+0x3a0e): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x3a3e): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x3a57): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x3a66): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x3b1e): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q11AssertOperateurIndexationConst_Test::TestBody()':
+test_vecteur.cc:(.text+0x3d1d): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0x3d6f): undefined reference to `testing::internal::DeathTest::Create(char const*, testing::internal::RE const*, char const*, int, testing::internal::DeathTest**)'
+test_vecteur.cc:(.text+0x3e09): undefined reference to `testing::internal::ExitedUnsuccessfully(int)'
+test_vecteur.cc:(.text+0x3e48): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0x3ecc): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x3ee8): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x3eed): undefined reference to `testing::internal::DeathTest::LastMessage()'
+test_vecteur.cc:(.text+0x3f11): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x3f2a): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x3f39): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x3fed): undefined reference to `testing::internal::FormatFileLocation(char const*, int)'
+test_vecteur.cc:(.text+0x40d3): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x40e7): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q11AssertOperateurIndexation_Test::TestBody()':
+test_vecteur.cc:(.text+0x417d): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0x41cf): undefined reference to `testing::internal::DeathTest::Create(char const*, testing::internal::RE const*, char const*, int, testing::internal::DeathTest**)'
+test_vecteur.cc:(.text+0x4269): undefined reference to `testing::internal::ExitedUnsuccessfully(int)'
+test_vecteur.cc:(.text+0x42a8): undefined reference to `testing::internal::AlwaysTrue()'
+test_vecteur.cc:(.text+0x4337): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x4353): undefined reference to `testing::Message::Message()'
+test_vecteur.cc:(.text+0x4358): undefined reference to `testing::internal::DeathTest::LastMessage()'
+test_vecteur.cc:(.text+0x437c): undefined reference to `testing::internal::AssertHelper::AssertHelper(testing::TestPartResult::Type, char const*, int, char const*)'
+test_vecteur.cc:(.text+0x4395): undefined reference to `testing::internal::AssertHelper::operator=(testing::Message const&) const'
+test_vecteur.cc:(.text+0x43a4): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+test_vecteur.cc:(.text+0x4458): undefined reference to `testing::internal::FormatFileLocation(char const*, int)'
+test_vecteur.cc:(.text+0x453e): undefined reference to `testing::internal::RE::~RE()'
+test_vecteur.cc:(.text+0x4552): undefined reference to `testing::internal::AssertHelper::~AssertHelper()'
+/tmp/ccX8rIQ0.o: In function `main':
+test_vecteur.cc:(.text+0x4974): undefined reference to `testing::InitGoogleTest(int*, char**)'
+test_vecteur.cc:(.text+0x497e): undefined reference to `testing::FLAGS_gtest_death_test_style'
+/tmp/ccX8rIQ0.o: In function `__static_initialization_and_destruction_0(int, int)':
+test_vecteur.cc:(.text+0x49e8): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4a17): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4a38): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4a67): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4a88): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4ab7): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4ad8): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4b07): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4b28): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4b57): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4b78): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4ba7): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4bc8): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4bf7): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4c18): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4c47): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4c68): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4c97): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4cb8): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4ce7): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4d08): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4d37): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4d58): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4d87): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4da8): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4dd7): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4df8): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4e27): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4e48): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4e77): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4e98): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4ec7): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4ee8): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4f17): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4f38): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4f67): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4f88): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x4fb7): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x4fd8): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x5007): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+test_vecteur.cc:(.text+0x5028): undefined reference to `testing::internal::GetTestTypeId()'
+test_vecteur.cc:(.text+0x5057): undefined reference to `testing::internal::MakeAndRegisterTestInfo(char const*, char const*, char const*, char const*, void const*, void (*)(), void (*)(), testing::internal::TestFactoryBase*)'
+/tmp/ccX8rIQ0.o: In function `testing::internal::RE::RE(char const*)':
+test_vecteur.cc:(.text._ZN7testing8internal2REC2EPKc[_ZN7testing8internal2REC5EPKc]+0x1f): undefined reference to `testing::internal::RE::Init(char const*)'
+/tmp/ccX8rIQ0.o: In function `RUN_ALL_TESTS()':
+test_vecteur.cc:(.text._Z13RUN_ALL_TESTSv[_Z13RUN_ALL_TESTSv]+0x5): undefined reference to `testing::UnitTest::GetInstance()'
+test_vecteur.cc:(.text._Z13RUN_ALL_TESTSv[_Z13RUN_ALL_TESTSv]+0xd): undefined reference to `testing::UnitTest::Run()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_assertConstructeur_Test::TestVecteur_DISABLED_assertConstructeur_Test()':
+test_vecteur.cc:(.text._ZN44TestVecteur_DISABLED_assertConstructeur_TestC2Ev[_ZN44TestVecteur_DISABLED_assertConstructeur_TestC5Ev]+0x14): undefined reference to `testing::Test::Test()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_assertGet_Test::TestVecteur_DISABLED_assertGet_Test()':
+test_vecteur.cc:(.text._ZN35TestVecteur_DISABLED_assertGet_TestC2Ev[_ZN35TestVecteur_DISABLED_assertGet_TestC5Ev]+0x14): undefined reference to `testing::Test::Test()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q1Constructeur2Param_Test::TestVecteur_DISABLED_q1Constructeur2Param_Test()':
+test_vecteur.cc:(.text._ZN46TestVecteur_DISABLED_q1Constructeur2Param_TestC2Ev[_ZN46TestVecteur_DISABLED_q1Constructeur2Param_TestC5Ev]+0x14): undefined reference to `testing::Test::Test()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q1Constructeur1Param_Test::TestVecteur_DISABLED_q1Constructeur1Param_Test()':
+test_vecteur.cc:(.text._ZN46TestVecteur_DISABLED_q1Constructeur1Param_TestC2Ev[_ZN46TestVecteur_DISABLED_q1Constructeur1Param_TestC5Ev]+0x14): undefined reference to `testing::Test::Test()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q1Constructeur0Param_Test::TestVecteur_DISABLED_q1Constructeur0Param_Test()':
+test_vecteur.cc:(.text._ZN46TestVecteur_DISABLED_q1Constructeur0Param_TestC2Ev[_ZN46TestVecteur_DISABLED_q1Constructeur0Param_TestC5Ev]+0x14): undefined reference to `testing::Test::Test()'
+/tmp/ccX8rIQ0.o:test_vecteur.cc:(.text._ZN35TestVecteur_DISABLED_assertSet_TestC2Ev[_ZN35TestVecteur_DISABLED_assertSet_TestC5Ev]+0x14): more undefined references to `testing::Test::Test()' follow
+/tmp/ccX8rIQ0.o: In function `testing::internal::scoped_ptr<std::string>::reset(std::string*)':
+test_vecteur.cc:(.text._ZN7testing8internal10scoped_ptrISsE5resetEPSs[_ZN7testing8internal10scoped_ptrISsE5resetEPSs]+0x29): undefined reference to `testing::internal::IsTrue(bool)'
+/tmp/ccX8rIQ0.o: In function `testing::AssertionResult testing::internal::EqHelper<false>::Compare<unsigned int, int>(char const*, char const*, unsigned int const&, int const&)':
+test_vecteur.cc:(.text._ZN7testing8internal8EqHelperILb0EE7CompareIjiEENS_15AssertionResultEPKcS6_RKT_RKT0_[_ZN7testing8internal8EqHelperILb0EE7CompareIjiEENS_15AssertionResultEPKcS6_RKT_RKT0_]+0x4b): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+/tmp/ccX8rIQ0.o: In function `testing::AssertionResult testing::internal::EqHelper<false>::Compare<float, float>(char const*, char const*, float const&, float const&)':
+test_vecteur.cc:(.text._ZN7testing8internal8EqHelperILb0EE7CompareIffEENS_15AssertionResultEPKcS6_RKT_RKT0_[_ZN7testing8internal8EqHelperILb0EE7CompareIffEENS_15AssertionResultEPKcS6_RKT_RKT0_]+0x4b): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+/tmp/ccX8rIQ0.o: In function `testing::AssertionResult testing::internal::EqHelper<false>::Compare<int, int>(char const*, char const*, int const&, int const&)':
+test_vecteur.cc:(.text._ZN7testing8internal8EqHelperILb0EE7CompareIiiEENS_15AssertionResultEPKcS6_RKT_RKT0_[_ZN7testing8internal8EqHelperILb0EE7CompareIiiEENS_15AssertionResultEPKcS6_RKT_RKT0_]+0x4b): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+/tmp/ccX8rIQ0.o: In function `testing::internal::scoped_ptr<std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> > >::reset(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*)':
+test_vecteur.cc:(.text._ZN7testing8internal10scoped_ptrISt18basic_stringstreamIcSt11char_traitsIcESaIcEEE5resetEPS6_[_ZN7testing8internal10scoped_ptrISt18basic_stringstreamIcSt11char_traitsIcESaIcEEE5resetEPS6_]+0x28): undefined reference to `testing::internal::IsTrue(bool)'
+/tmp/ccX8rIQ0.o: In function `testing::AssertionResult testing::internal::CmpHelperEQ<unsigned int, int>(char const*, char const*, unsigned int const&, int const&)':
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIjiEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIjiEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0x35): undefined reference to `testing::AssertionSuccess()'
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIjiEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIjiEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0x48): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIjiEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIjiEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0xac): undefined reference to `testing::internal::EqFailure(char const*, char const*, std::string const&, std::string const&, bool)'
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIjiEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIjiEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0xbf): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+/tmp/ccX8rIQ0.o: In function `testing::AssertionResult testing::internal::CmpHelperEQ<float, float>(char const*, char const*, float const&, float const&)':
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIffEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIffEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0x3f): undefined reference to `testing::AssertionSuccess()'
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIffEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIffEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0x52): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIffEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIffEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0xb6): undefined reference to `testing::internal::EqFailure(char const*, char const*, std::string const&, std::string const&, bool)'
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIffEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIffEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0xc9): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+/tmp/ccX8rIQ0.o: In function `testing::AssertionResult testing::internal::CmpHelperEQ<int, int>(char const*, char const*, int const&, int const&)':
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0x35): undefined reference to `testing::AssertionSuccess()'
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0x48): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0xac): undefined reference to `testing::internal::EqFailure(char const*, char const*, std::string const&, std::string const&, bool)'
+test_vecteur.cc:(.text._ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_[_ZN7testing8internal11CmpHelperEQIiiEENS_15AssertionResultEPKcS4_RKT_RKT0_]+0xbf): undefined reference to `testing::AssertionResult::AssertionResult(testing::AssertionResult const&)'
+/tmp/ccX8rIQ0.o: In function `testing::internal::scoped_ptr<testing::internal::DeathTest>::reset(testing::internal::DeathTest*)':
+test_vecteur.cc:(.text._ZN7testing8internal10scoped_ptrINS0_9DeathTestEE5resetEPS2_[_ZN7testing8internal10scoped_ptrINS0_9DeathTestEE5resetEPS2_]+0x28): undefined reference to `testing::internal::IsTrue(bool)'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV60TestVecteur_DISABLED_q11OperateurIndexationModification_Test[_ZTV60TestVecteur_DISABLED_q11OperateurIndexationModification_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV60TestVecteur_DISABLED_q11OperateurIndexationModification_Test[_ZTV60TestVecteur_DISABLED_q11OperateurIndexationModification_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q11OperateurIndexationModification_Test::~TestVecteur_DISABLED_q11OperateurIndexationModification_Test()':
+test_vecteur.cc:(.text._ZN60TestVecteur_DISABLED_q11OperateurIndexationModification_TestD2Ev[_ZN60TestVecteur_DISABLED_q11OperateurIndexationModification_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV60TestVecteur_DISABLED_q11OperateurIndexationConsultation_Test[_ZTV60TestVecteur_DISABLED_q11OperateurIndexationConsultation_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV60TestVecteur_DISABLED_q11OperateurIndexationConsultation_Test[_ZTV60TestVecteur_DISABLED_q11OperateurIndexationConsultation_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q11OperateurIndexationConsultation_Test::~TestVecteur_DISABLED_q11OperateurIndexationConsultation_Test()':
+test_vecteur.cc:(.text._ZN60TestVecteur_DISABLED_q11OperateurIndexationConsultation_TestD2Ev[_ZN60TestVecteur_DISABLED_q11OperateurIndexationConsultation_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV54TestVecteur_DISABLED_q11AssertOperateurIndexation_Test[_ZTV54TestVecteur_DISABLED_q11AssertOperateurIndexation_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV54TestVecteur_DISABLED_q11AssertOperateurIndexation_Test[_ZTV54TestVecteur_DISABLED_q11AssertOperateurIndexation_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q11AssertOperateurIndexation_Test::~TestVecteur_DISABLED_q11AssertOperateurIndexation_Test()':
+test_vecteur.cc:(.text._ZN54TestVecteur_DISABLED_q11AssertOperateurIndexation_TestD2Ev[_ZN54TestVecteur_DISABLED_q11AssertOperateurIndexation_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV59TestVecteur_DISABLED_q11AssertOperateurIndexationConst_Test[_ZTV59TestVecteur_DISABLED_q11AssertOperateurIndexationConst_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV59TestVecteur_DISABLED_q11AssertOperateurIndexationConst_Test[_ZTV59TestVecteur_DISABLED_q11AssertOperateurIndexationConst_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q11AssertOperateurIndexationConst_Test::~TestVecteur_DISABLED_q11AssertOperateurIndexationConst_Test()':
+test_vecteur.cc:(.text._ZN59TestVecteur_DISABLED_q11AssertOperateurIndexationConst_TestD2Ev[_ZN59TestVecteur_DISABLED_q11AssertOperateurIndexationConst_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV44TestVecteur_DISABLED_q10OperateurSaisie_Test[_ZTV44TestVecteur_DISABLED_q10OperateurSaisie_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV44TestVecteur_DISABLED_q10OperateurSaisie_Test[_ZTV44TestVecteur_DISABLED_q10OperateurSaisie_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q10OperateurSaisie_Test::~TestVecteur_DISABLED_q10OperateurSaisie_Test()':
+test_vecteur.cc:(.text._ZN44TestVecteur_DISABLED_q10OperateurSaisie_TestD2Ev[_ZN44TestVecteur_DISABLED_q10OperateurSaisie_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV43TestVecteur_DISABLED_q9ProduitScalaire_Test[_ZTV43TestVecteur_DISABLED_q9ProduitScalaire_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV43TestVecteur_DISABLED_q9ProduitScalaire_Test[_ZTV43TestVecteur_DISABLED_q9ProduitScalaire_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q9ProduitScalaire_Test::~TestVecteur_DISABLED_q9ProduitScalaire_Test()':
+test_vecteur.cc:(.text._ZN43TestVecteur_DISABLED_q9ProduitScalaire_TestD2Ev[_ZN43TestVecteur_DISABLED_q9ProduitScalaire_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV49TestVecteur_DISABLED_q8OperateurAdd3vecteurs_Test[_ZTV49TestVecteur_DISABLED_q8OperateurAdd3vecteurs_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV49TestVecteur_DISABLED_q8OperateurAdd3vecteurs_Test[_ZTV49TestVecteur_DISABLED_q8OperateurAdd3vecteurs_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q8OperateurAdd3vecteurs_Test::~TestVecteur_DISABLED_q8OperateurAdd3vecteurs_Test()':
+test_vecteur.cc:(.text._ZN49TestVecteur_DISABLED_q8OperateurAdd3vecteurs_TestD2Ev[_ZN49TestVecteur_DISABLED_q8OperateurAdd3vecteurs_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV49TestVecteur_DISABLED_q8OperateurAdd2vecteurs_Test[_ZTV49TestVecteur_DISABLED_q8OperateurAdd2vecteurs_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV49TestVecteur_DISABLED_q8OperateurAdd2vecteurs_Test[_ZTV49TestVecteur_DISABLED_q8OperateurAdd2vecteurs_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q8OperateurAdd2vecteurs_Test::~TestVecteur_DISABLED_q8OperateurAdd2vecteurs_Test()':
+test_vecteur.cc:(.text._ZN49TestVecteur_DISABLED_q8OperateurAdd2vecteurs_TestD2Ev[_ZN49TestVecteur_DISABLED_q8OperateurAdd2vecteurs_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV62TestVecteur_DISABLED_q7OperateurAffectationTailleAugmente_Test[_ZTV62TestVecteur_DISABLED_q7OperateurAffectationTailleAugmente_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV62TestVecteur_DISABLED_q7OperateurAffectationTailleAugmente_Test[_ZTV62TestVecteur_DISABLED_q7OperateurAffectationTailleAugmente_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q7OperateurAffectationTailleAugmente_Test::~TestVecteur_DISABLED_q7OperateurAffectationTailleAugmente_Test()':
+test_vecteur.cc:(.text._ZN62TestVecteur_DISABLED_q7OperateurAffectationTailleAugmente_TestD2Ev[_ZN62TestVecteur_DISABLED_q7OperateurAffectationTailleAugmente_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV61TestVecteur_DISABLED_q7OperateurAffectationTailleDiminue_Test[_ZTV61TestVecteur_DISABLED_q7OperateurAffectationTailleDiminue_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV61TestVecteur_DISABLED_q7OperateurAffectationTailleDiminue_Test[_ZTV61TestVecteur_DISABLED_q7OperateurAffectationTailleDiminue_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q7OperateurAffectationTailleDiminue_Test::~TestVecteur_DISABLED_q7OperateurAffectationTailleDiminue_Test()':
+test_vecteur.cc:(.text._ZN61TestVecteur_DISABLED_q7OperateurAffectationTailleDiminue_TestD2Ev[_ZN61TestVecteur_DISABLED_q7OperateurAffectationTailleDiminue_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV52TestVecteur_DISABLED_q6ConstructeurDeCopieModif_Test[_ZTV52TestVecteur_DISABLED_q6ConstructeurDeCopieModif_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV52TestVecteur_DISABLED_q6ConstructeurDeCopieModif_Test[_ZTV52TestVecteur_DISABLED_q6ConstructeurDeCopieModif_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q6ConstructeurDeCopieModif_Test::~TestVecteur_DISABLED_q6ConstructeurDeCopieModif_Test()':
+test_vecteur.cc:(.text._ZN52TestVecteur_DISABLED_q6ConstructeurDeCopieModif_TestD2Ev[_ZN52TestVecteur_DISABLED_q6ConstructeurDeCopieModif_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV47TestVecteur_DISABLED_q6ConstructeurDeCopie_Test[_ZTV47TestVecteur_DISABLED_q6ConstructeurDeCopie_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV47TestVecteur_DISABLED_q6ConstructeurDeCopie_Test[_ZTV47TestVecteur_DISABLED_q6ConstructeurDeCopie_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q6ConstructeurDeCopie_Test::~TestVecteur_DISABLED_q6ConstructeurDeCopie_Test()':
+test_vecteur.cc:(.text._ZN47TestVecteur_DISABLED_q6ConstructeurDeCopie_TestD2Ev[_ZN47TestVecteur_DISABLED_q6ConstructeurDeCopie_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV31TestVecteur_DISABLED_q4Add_Test[_ZTV31TestVecteur_DISABLED_q4Add_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV31TestVecteur_DISABLED_q4Add_Test[_ZTV31TestVecteur_DISABLED_q4Add_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q4Add_Test::~TestVecteur_DISABLED_q4Add_Test()':
+test_vecteur.cc:(.text._ZN31TestVecteur_DISABLED_q4Add_TestD2Ev[_ZN31TestVecteur_DISABLED_q4Add_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV39TestVecteur_DISABLED_q2Lirevecteur_Test[_ZTV39TestVecteur_DISABLED_q2Lirevecteur_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV39TestVecteur_DISABLED_q2Lirevecteur_Test[_ZTV39TestVecteur_DISABLED_q2Lirevecteur_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q2Lirevecteur_Test::~TestVecteur_DISABLED_q2Lirevecteur_Test()':
+test_vecteur.cc:(.text._ZN39TestVecteur_DISABLED_q2Lirevecteur_TestD2Ev[_ZN39TestVecteur_DISABLED_q2Lirevecteur_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV31TestVecteur_DISABLED_q1Set_Test[_ZTV31TestVecteur_DISABLED_q1Set_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV31TestVecteur_DISABLED_q1Set_Test[_ZTV31TestVecteur_DISABLED_q1Set_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q1Set_Test::~TestVecteur_DISABLED_q1Set_Test()':
+test_vecteur.cc:(.text._ZN31TestVecteur_DISABLED_q1Set_TestD2Ev[_ZN31TestVecteur_DISABLED_q1Set_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV35TestVecteur_DISABLED_assertSet_Test[_ZTV35TestVecteur_DISABLED_assertSet_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV35TestVecteur_DISABLED_assertSet_Test[_ZTV35TestVecteur_DISABLED_assertSet_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_assertSet_Test::~TestVecteur_DISABLED_assertSet_Test()':
+test_vecteur.cc:(.text._ZN35TestVecteur_DISABLED_assertSet_TestD2Ev[_ZN35TestVecteur_DISABLED_assertSet_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV46TestVecteur_DISABLED_q1Constructeur0Param_Test[_ZTV46TestVecteur_DISABLED_q1Constructeur0Param_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV46TestVecteur_DISABLED_q1Constructeur0Param_Test[_ZTV46TestVecteur_DISABLED_q1Constructeur0Param_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q1Constructeur0Param_Test::~TestVecteur_DISABLED_q1Constructeur0Param_Test()':
+test_vecteur.cc:(.text._ZN46TestVecteur_DISABLED_q1Constructeur0Param_TestD2Ev[_ZN46TestVecteur_DISABLED_q1Constructeur0Param_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV46TestVecteur_DISABLED_q1Constructeur1Param_Test[_ZTV46TestVecteur_DISABLED_q1Constructeur1Param_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV46TestVecteur_DISABLED_q1Constructeur1Param_Test[_ZTV46TestVecteur_DISABLED_q1Constructeur1Param_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q1Constructeur1Param_Test::~TestVecteur_DISABLED_q1Constructeur1Param_Test()':
+test_vecteur.cc:(.text._ZN46TestVecteur_DISABLED_q1Constructeur1Param_TestD2Ev[_ZN46TestVecteur_DISABLED_q1Constructeur1Param_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV46TestVecteur_DISABLED_q1Constructeur2Param_Test[_ZTV46TestVecteur_DISABLED_q1Constructeur2Param_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV46TestVecteur_DISABLED_q1Constructeur2Param_Test[_ZTV46TestVecteur_DISABLED_q1Constructeur2Param_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_q1Constructeur2Param_Test::~TestVecteur_DISABLED_q1Constructeur2Param_Test()':
+test_vecteur.cc:(.text._ZN46TestVecteur_DISABLED_q1Constructeur2Param_TestD2Ev[_ZN46TestVecteur_DISABLED_q1Constructeur2Param_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV35TestVecteur_DISABLED_assertGet_Test[_ZTV35TestVecteur_DISABLED_assertGet_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV35TestVecteur_DISABLED_assertGet_Test[_ZTV35TestVecteur_DISABLED_assertGet_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_assertGet_Test::~TestVecteur_DISABLED_assertGet_Test()':
+test_vecteur.cc:(.text._ZN35TestVecteur_DISABLED_assertGet_TestD2Ev[_ZN35TestVecteur_DISABLED_assertGet_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV44TestVecteur_DISABLED_assertConstructeur_Test[_ZTV44TestVecteur_DISABLED_assertConstructeur_Test]+0x20): undefined reference to `testing::Test::SetUp()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTV44TestVecteur_DISABLED_assertConstructeur_Test[_ZTV44TestVecteur_DISABLED_assertConstructeur_Test]+0x28): undefined reference to `testing::Test::TearDown()'
+/tmp/ccX8rIQ0.o: In function `TestVecteur_DISABLED_assertConstructeur_Test::~TestVecteur_DISABLED_assertConstructeur_Test()':
+test_vecteur.cc:(.text._ZN44TestVecteur_DISABLED_assertConstructeur_TestD2Ev[_ZN44TestVecteur_DISABLED_assertConstructeur_TestD5Ev]+0x1f): undefined reference to `testing::Test::~Test()'
+/tmp/ccX8rIQ0.o:(.rodata._ZTI60TestVecteur_DISABLED_q11OperateurIndexationModification_Test[_ZTI60TestVecteur_DISABLED_q11OperateurIndexationModification_Test]+0x10): undefined reference to `typeinfo for testing::Test'
+/tmp/ccX8rIQ0.o:(.rodata._ZTI60TestVecteur_DISABLED_q11OperateurIndexationConsultation_Test[_ZTI60TestVecteur_DISABLED_q11OperateurIndexationConsultation_Test]+0x10): undefined reference to `typeinfo for testing::Test'
+/tmp/ccX8rIQ0.o:(.rodata._ZTI54TestVecteur_DISABLED_q11AssertOperateurIndexation_Test[_ZTI54TestVecteur_DISABLED_q11AssertOperateurIndexation_Test]+0x10): undefined reference to `typeinfo for testing::Test'
+/tmp/ccX8rIQ0.o:(.rodata._ZTI59TestVecteur_DISABLED_q11AssertOperateurIndexationConst_Test[_ZTI59TestVecteur_DISABLED_q11AssertOperateurIndexationConst_Test]+0x10): undefined reference to `typeinfo for testing::Test'
+/tmp/ccX8rIQ0.o:(.rodata._ZTI44TestVecteur_DISABLED_q10OperateurSaisie_Test[_ZTI44TestVecteur_DISABLED_q10OperateurSaisie_Test]+0x10): undefined reference to `typeinfo for testing::Test'
+/tmp/ccX8rIQ0.o:(.rodata._ZTI43TestVecteur_DISABLED_q9ProduitScalaire_Test[_ZTI43TestVecteur_DISABLED_q9ProduitScalaire_Test]+0x10): more undefined references to `typeinfo for testing::Test' follow
+collect2: error: ld returned 1 exit status
+make: *** [default] Error 1

@@ -1,0 +1,5 @@
+<map id="filtre" name="filtre">
+<area shape="rect" id="node2" href="$classproducteur.html" title="Interface d&#39;un producteur d&#39;échantillons sonores. Il s&#39;agit d&#39;une interface décrivant un composant ne..." alt="" coords="5,80,87,107"/>
+<area shape="rect" id="node3" href="$classcomposant.html" title="Interface d&#39;un composant du systeme sonore. " alt="" coords="63,5,149,32"/>
+<area shape="rect" id="node4" href="$classconsommateur.html" title="Interface d&#39;un consommateur d&#39;échantillons sonores. Il s&#39;agit d&#39;une interface décrivant un composant ..." alt="" coords="113,80,220,107"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="src/volume.cpp" name="src/volume.cpp">
+<area shape="rect" id="node2" href="$volume_8h.html" title="volume.h" alt="" coords="308,80,381,107"/>
+<area shape="rect" id="node16" href="$imp__flot_8h.html" title="imp_flot.h" alt="" coords="766,80,844,107"/>
+<area shape="rect" id="node3" href="$filtre__base_8h.html" title="filtre_base.h" alt="" coords="320,229,413,256"/>
+<area shape="rect" id="node7" href="$flot_8h.html" title="flot.h" alt="" coords="653,453,704,480"/>
+<area shape="rect" id="node8" href="$counted__ptr_8h.html" title="counted_ptr.h" alt="" coords="133,453,232,480"/>
+<area shape="rect" id="node14" href="$signal__constant_8h.html" title="signal_constant.h" alt="" coords="146,229,269,256"/>
+<area shape="rect" id="node15" href="$multiplicateur_8h.html" title="multiplicateur.h" alt="" coords="245,155,355,181"/>
+<area shape="rect" id="node4" href="$filtre_8h.html" title="filtre.h" alt="" coords="527,304,584,331"/>
+<area shape="rect" id="node11" href="$producteur__base_8h.html" title="producteur_base.h" alt="" coords="195,304,324,331"/>
+<area shape="rect" id="node13" href="$consommateur__base_8h.html" title="consommateur_base.h" alt="" coords="348,304,501,331"/>
+<area shape="rect" id="node5" href="$producteur_8h.html" title="producteur.h" alt="" coords="379,379,472,405"/>
+<area shape="rect" id="node10" href="$consommateur_8h.html" title="consommateur.h" alt="" coords="497,379,615,405"/>
+<area shape="rect" id="node6" href="$composant_8h.html" title="composant.h" alt="" coords="442,453,539,480"/>
+</map>

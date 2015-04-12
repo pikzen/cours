@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pikzen/prog-cpp/TP11/copier.h
+liste.hh
+/home/pikzen/prog-cpp/TP11/liste.hh
+
+/home/pikzen/prog-cpp/TP11/cyclicnode.h
+
+/home/pikzen/prog-cpp/TP11/liste.hh
+cyclicnode.h
+/home/pikzen/prog-cpp/TP11/cyclicnode.h
+assert.h
+-
+
+/home/pikzen/prog-cpp/TP11/main.cpp
+iostream
+-
+string
+-
+liste.hh
+/home/pikzen/prog-cpp/TP11/liste.hh
+copier.h
+/home/pikzen/prog-cpp/TP11/copier.h
+

@@ -1,0 +1,35 @@
+<map id="include/flot.h" name="include/flot.h">
+<area shape="rect" id="node2" href="$consommateur__base_8h.html" title="src/consommateur_base.h" alt="" coords="1277,155,1453,181"/>
+<area shape="rect" id="node16" href="$volume_8h.html" title="src/volume.h" alt="" coords="1233,395,1329,421"/>
+<area shape="rect" id="node20" href="$imp__flot_8h.html" title="src/imp_flot.h" alt="" coords="473,320,575,347"/>
+<area shape="rect" id="node25" href="$producteur__base_8h.html" title="src/producteur_base.h" alt="" coords="1478,155,1628,181"/>
+<area shape="rect" id="node30" href="$consommateur_8h.html" title="include/consommateur.h" alt="" coords="1635,80,1797,107"/>
+<area shape="rect" id="node34" href="$producteur_8h.html" title="include/producteur.h" alt="" coords="1472,80,1611,107"/>
+<area shape="rect" id="node3" href="$consommateur__base_8cpp.html" title="src/consommateur_base.cpp" alt="" coords="5,395,195,421"/>
+<area shape="rect" id="node4" href="$filtre__base_8h.html" title="src/filtre_base.h" alt="" coords="1321,237,1436,264"/>
+<area shape="rect" id="node5" href="$filtre__base_8cpp.html" title="src/filtre_base.cpp" alt="" coords="1314,320,1443,347"/>
+<area shape="rect" id="node6" href="$filtre__compose_8h.html" title="src/filtre_compose.h" alt="" coords="1793,320,1932,347"/>
+<area shape="rect" id="node14" href="$mixer__element_8cpp.html" title="src/mixer_element.cpp" alt="" coords="700,469,853,496"/>
+<area shape="rect" id="node15" href="$multiplicateur_8h.html" title="src/multiplicateur.h" alt="" coords="1467,320,1596,347"/>
+<area shape="rect" id="node19" href="$operation__binaire_8h.html" title="src/operation_binaire.h" alt="" coords="701,395,853,421"/>
+<area shape="rect" id="node7" href="$filtre__compose_8cpp.html" title="src/filtre_compose.cpp" alt="" coords="2180,395,2333,421"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="2094,469,2191,496"/>
+<area shape="rect" id="node9" href="$volume__compose_8h.html" title="src/volume_compose.h" alt="" coords="1780,395,1937,421"/>
+<area shape="rect" id="node12" href="$mixeur_8h.html" title="src/mixeur.h" alt="" coords="1961,395,2055,421"/>
+<area shape="rect" id="node13" href="$mixer__element_8h.html" title="src/mixer_element.h" alt="" coords="1354,395,1493,421"/>
+<area shape="rect" id="node10" href="$mixeur_8cpp.html" title="src/mixeur.cpp" alt="" coords="1448,469,1555,496"/>
+<area shape="rect" id="node11" href="$volume__compose_8cpp.html" title="src/volume_compose.cpp" alt="" coords="1657,469,1828,496"/>
+<area shape="rect" id="node18" href="$multiplicateur_8cpp.html" title="src/multiplicateur.cpp" alt="" coords="878,395,1023,421"/>
+<area shape="rect" id="node17" href="$volume_8cpp.html" title="src/volume.cpp" alt="" coords="371,469,481,496"/>
+<area shape="rect" id="node21" href="$harmonique_8cpp.html" title="src/harmonique.cpp" alt="" coords="1569,395,1704,421"/>
+<area shape="rect" id="node22" href="$imp__flot_8cpp.html" title="src/imp_flot.cpp" alt="" coords="321,395,436,421"/>
+<area shape="rect" id="node23" href="$producteur__base_8cpp.html" title="src/producteur_base.cpp" alt="" coords="460,395,624,421"/>
+<area shape="rect" id="node24" href="$signal__constant_8cpp.html" title="src/signal_constant.cpp" alt="" coords="1048,395,1207,421"/>
+<area shape="rect" id="node26" href="$file__reader_8h.html" title="src/file_reader.h" alt="" coords="2123,237,2237,264"/>
+<area shape="rect" id="node28" href="$harmonique_8h.html" title="src/harmonique.h" alt="" coords="1957,320,2080,347"/>
+<area shape="rect" id="node29" href="$signal__constant_8h.html" title="src/signal_constant.h" alt="" coords="1621,320,1768,347"/>
+<area shape="rect" id="node27" href="$file__reader_8cpp.html" title="src/file_reader.cpp" alt="" coords="2116,320,2244,347"/>
+<area shape="rect" id="node31" href="$enregistreur__fichier_8h.html" title="include/enregistreur\l_fichier.h" alt="" coords="2494,230,2628,271"/>
+<area shape="rect" id="node32" href="$enregistreur__fichier__texte_8h.html" title="include/enregistreur\l_fichier_texte.h" alt="" coords="2311,230,2445,271"/>
+<area shape="rect" id="node33" href="$filtre_8h.html" title="include/filtre.h" alt="" coords="1653,155,1755,181"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="include/consommateur.h" name="include/consommateur.h">
+<area shape="rect" id="node2" href="$consommateur__base_8h.html" title="src/consommateur_base.h" alt="" coords="284,88,460,115"/>
+<area shape="rect" id="node20" href="$enregistreur__fichier_8h.html" title="include/enregistreur\l_fichier.h" alt="" coords="5,171,139,213"/>
+<area shape="rect" id="node21" href="$enregistreur__fichier__texte_8h.html" title="include/enregistreur\l_fichier_texte.h" alt="" coords="115,81,249,122"/>
+<area shape="rect" id="node22" href="$filtre_8h.html" title="include/filtre.h" alt="" coords="497,88,599,115"/>
+<area shape="rect" id="node3" href="$consommateur__base_8cpp.html" title="src/consommateur_base.cpp" alt="" coords="277,179,467,205"/>
+<area shape="rect" id="node4" href="$filtre__base_8h.html" title="src/filtre_base.h" alt="" coords="497,179,612,205"/>
+<area shape="rect" id="node5" href="$filtre__base_8cpp.html" title="src/filtre_base.cpp" alt="" coords="510,261,639,288"/>
+<area shape="rect" id="node6" href="$filtre__compose_8h.html" title="src/filtre_compose.h" alt="" coords="743,261,883,288"/>
+<area shape="rect" id="node14" href="$mixer__element_8cpp.html" title="src/mixer_element.cpp" alt="" coords="1308,411,1461,437"/>
+<area shape="rect" id="node15" href="$multiplicateur_8h.html" title="src/multiplicateur.h" alt="" coords="356,261,485,288"/>
+<area shape="rect" id="node16" href="$volume_8h.html" title="src/volume.h" alt="" coords="215,336,312,363"/>
+<area shape="rect" id="node19" href="$operation__binaire_8h.html" title="src/operation_binaire.h" alt="" coords="1138,336,1291,363"/>
+<area shape="rect" id="node7" href="$filtre__compose_8cpp.html" title="src/filtre_compose.cpp" alt="" coords="959,336,1112,363"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="430,411,527,437"/>
+<area shape="rect" id="node9" href="$volume__compose_8h.html" title="src/volume_compose.h" alt="" coords="660,336,817,363"/>
+<area shape="rect" id="node12" href="$mixeur_8h.html" title="src/mixeur.h" alt="" coords="841,336,935,363"/>
+<area shape="rect" id="node13" href="$mixer__element_8h.html" title="src/mixer_element.h" alt="" coords="1315,336,1455,363"/>
+<area shape="rect" id="node10" href="$mixeur_8cpp.html" title="src/mixeur.cpp" alt="" coords="835,411,941,437"/>
+<area shape="rect" id="node11" href="$volume__compose_8cpp.html" title="src/volume_compose.cpp" alt="" coords="588,411,759,437"/>
+<area shape="rect" id="node18" href="$multiplicateur_8cpp.html" title="src/multiplicateur.cpp" alt="" coords="389,336,533,363"/>
+<area shape="rect" id="node17" href="$volume_8cpp.html" title="src/volume.cpp" alt="" coords="209,411,319,437"/>
+</map>

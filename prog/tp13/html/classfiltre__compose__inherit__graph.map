@@ -1,0 +1,12 @@
+<map id="filtre_compose" name="filtre_compose">
+<area shape="rect" id="node9" href="$classmixer__element.html" title="mixer_element" alt="" coords="9,379,116,405"/>
+<area shape="rect" id="node10" href="$classmixeur.html" title="mixeur" alt="" coords="140,379,201,405"/>
+<area shape="rect" id="node11" href="$classvolume__compose.html" title="volume_compose" alt="" coords="226,379,349,405"/>
+<area shape="rect" id="node2" href="$classfiltre__base.html" title="filtre_base" alt="" coords="129,229,211,256"/>
+<area shape="rect" id="node3" href="$classfiltre.html" title="Interface associée à un filtre sonore. Ce filtre est considéré comme un producteur / consommateur d&#39;é..." alt="" coords="147,155,193,181"/>
+<area shape="rect" id="node4" href="$classproducteur.html" title="Interface d&#39;un producteur d&#39;échantillons sonores. Il s&#39;agit d&#39;une interface décrivant un composant ne..." alt="" coords="75,80,156,107"/>
+<area shape="rect" id="node7" href="$classproducteur__base.html" title="producteur_base" alt="" coords="5,155,123,181"/>
+<area shape="rect" id="node5" href="$classcomposant.html" title="Interface d&#39;un composant du systeme sonore. " alt="" coords="133,5,219,32"/>
+<area shape="rect" id="node6" href="$classconsommateur.html" title="Interface d&#39;un consommateur d&#39;échantillons sonores. Il s&#39;agit d&#39;une interface décrivant un composant ..." alt="" coords="182,80,289,107"/>
+<area shape="rect" id="node8" href="$classconsommateur__base.html" title="consommateur_base" alt="" coords="218,155,360,181"/>
+</map>

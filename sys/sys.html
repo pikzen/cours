@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style>body{font-family:'Helvetica',sans-serif;margin:0 auto; width:70%;padding-top:30px;}</style>
+</head>
+<body>
+<h1 id="compte-rendu-de-tp-système">Compte rendu de TP Système</h1>
+<p>Florian EULA, ESIR1</p>
+<h2 id="recherche-et-tris">Recherche et tris</h2>
+<h3 id="question-1">Question 1</h3>
+<p>$ <code>find /share/esir1/sys -size +1000k -type f | tee /dev/tty | wc -l</code></p>
+<p>On utilise tee pour afficher la liste ET rediriger vers wc</p>
+<h3 id="question-2">Question 2</h3>
+<p>$ <code>find /share/esir1/sys -type f -ctime 10</code></p>
+<h3 id="question-3">Question 3</h3>
+<p>$ <code>find /share/esir* -type f -user ekijak</code></p>
+<p>23 342 fichiers listés. ### Question 4 $ <code>find /share/esir* -type f -user ekijak | xargs du -h | sort -rn | head -n 20</code></p>
+<p><code>464268 /share/esir3 VO.tar.gz 133588 /share/esir3/projets/resume/data/Muse/Transcoding 44-Muse-Intro&amp;Undisclosed_Desires-Youtube_transcoded_854x480.mp4 126952 /share/esir3/projets/resume/data/Muse/Transcoding 10-Muse-New_Born-Youtube_transcoded_854x480.mp4 125932 /share/esir3/projets/resume/data/Muse/Transcoding 9-Muse-New_Born-Youtube_transcoded_854x480.mp4 114936 /share/esir3/projets/resume/data/Muse/Transcoding 64-Muse-Knights_Of_Cydonia-Youtube_transcoded_854x480.mp4 111292 /share/esir3/projets/resume/data/Muse/Transcoding 33-Muse-I_Belong_To_You-Youtube_transcoded_854x480.mp4 110000 /share/esir3/projets/resume/data/Muse/Transcoding 61-Muse-Stockholm_Syndrome-Youtube_transcoded_854x480.mp4 103376 /share/esir3/projets/resume/data/Muse/Transcoding 13-Muse-MK_Ultra-Youtube_transcoded_854x480.mp4 92240 /share/esir3/projets/resume/data/Muse/Transcoding 60-Muse-Stockholm_Syndrome-Youtube_transcoded_854x480.mp4 90476 /share/esir3/projets/resume/data/Muse/flv 61-Muse-Stockholm_Syndrome-Youtube.flv 88792 /share/esir3/projets/resume/data/Muse/Transcoding 25-Muse-Hysteria-Youtube_transcoded_854x480.mp4 87504 /share/esir3/projets/resume/data/Muse/flv 64-Muse-Knights_Of_Cydonia-Youtube.flv 87488 /share/esir3/projets/resume/data/Muse/Transcoding 22-Muse-Hysteria-Youtube_transcoded_854x480.mp4 87172 /share/esir3/projets/resume/data/Muse/Transcoding 30-Muse-United_States_Of_Eurasia-Youtube_transcoded_854x480.mp4 81764 /share/esir3/projets/resume/data/Muse/Transcoding 29-Muse-United_States_Of_Eurasia-Youtube_transcoded_854x480.mp4 81344 /share/esir3/projets/resume/data/Muse/Transcoding 23-Muse-Hysteria-Youtube_transcoded_854x480.mp4 80964 /share/esir3/projets/resume/data/Muse/Transcoding 49-Muse-Starlight-Youtube_transcoded_854x480.mp4 80500 /share/esir3/projets/resume/data/Muse/Transcoding 7-Muse-Supermassive_Black_Hole-Youtube_transcoded_854x480.mp4 80288 /share/esir3/projets/resume/data/Muse/Transcoding 48-Muse-Resistance-Youtube_transcoded_854x480.mp4 77880 /share/esir3/projets/resume/data/Muse/Transcoding 63-Muse-Take_A_Bow-Youtube_transcoded_854x480.mp4</code></p>
+<h3 id="question-5">Question 5</h3>
+<p>Solution 1 : $ <code>find /share/esir* -type f -user ekijak | xargs du -h | sort -rn | grep -n &quot;esir2&quot; | head -n 1</code> Solution 2 : $ <code>find /share/esir* -type f -user ekijak -printf %k %h %f\n | sort -rn | grep -n &quot;esir2&quot; | head -n 1</code></p>
+<p>-printf définissant le format dans lequel seront affichés les résultats (%h étant le chemin, %f le fichier et %k la taille) <code>198:22356 /share/esir2/aci/weka 3-6-9.zip (22.9 Mo)</code></p>
+<h2 id="tp-n2----script">TP n°2 -- Script</h2>
+<p><em>listip.sh</em> <code>#!/bin/bash grep -oP &quot;\d+\.\d+\.\d+\.\d+&quot; &lt; $1 | sed -r 's/(.*(\b[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\b).*)/\2/g' | sort # Premièrement, on restreint l'application aux lignes contenant une addresse IP # Ensuite, on match l'intégralité de la ligne avec sed et on ne garde que le matching # group contenant l'IP.</code></p>
+<p><em>countip.sh</em> <code>#!/bin/bash first_line=1 # Puisqu'on compare la ligne actuelle à la précédente et que $previous est initialisé à &quot;&quot;,              # la toute premiere itération rapporterait une ip vide comme nouvelle.              # Ceci est un simple drapeau previous=&quot;&quot;  # Dernière adresse comptée count=0      # Nombre d'IPs consécutives while read line do         if [[ &quot;$previous&quot; != &quot;$line&quot; &amp;&amp; $first_line -eq 0 ]]         then                 # On à atteint une nouvelle addresse                 echo &quot;$previous-$count&quot;                 count=0         else                 count=$(($count+1))         fi         previous=$line         first_line=0 done</code></p>
+<p><em>sort.sh</em> `` #!/bin/bash</p>
+<h1 id="on-sort-en-fonction-dun-séparateur---puis-on-trie-avec-les-clés-nombre-doccurences-puis-ip">On sort en fonction d'un séparateur ('-'), puis on trie avec les clés (nombre d'occurences puis ip)</h1>
+<h1 id="t-indique-le-délimiteur--r-inverse-le-tri---reverse--n-indique-dinterpreter-les-nombres-comme-des-nombres-et--k-indique-la-colonne-de-la-clé">-t indique le délimiteur, -r inverse le tri (--reverse), -n indique d'interpreter les nombres comme des nombres, et -k indique la colonne de la clé</h1>
+<p>sort -t &quot;-&quot; -nrk2 -r -k1 $1 ``</p>
+<p><em>host.sh</em> `` #!/bin/bash</p>
+<h1 id="on-lit-chaque-ligne-cut-ladresse-ip-host-et-concatène-le-résultat">On lit chaque ligne, cut l'adresse IP, host et concatène le résultat</h1>
+<p>while read line do ip=<code>echo $line | cut -d'-' -f1</code> hostname=<code>host &quot;$ip&quot; | cut -d' ' -f5</code> # L'hostname est donné en 5è élément dans la sortie de host echo &quot;<span class="math"><em>l</em><em>i</em><em>n</em><em>e</em> − </span>hostname&quot; done ``</p>
+<p><em>analyse_logs.sh</em> `` #!/bin/bash has_args=true if [[ $# -eq 0 ]] then bash listip.sh | bash countip.sh | bash sort.sh | bash host.sh exit 0 fi</p>
+<p>for var in &quot;<span class="math">$@&quot; do         echo &quot;Analyzing $</span>var ...&quot; bash listip.sh &quot;$var&quot; | bash countip.sh | bash sort.sh | bash host.sh done ``</p>
+</body>
+</html>

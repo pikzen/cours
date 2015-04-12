@@ -1,0 +1,231 @@
+\hypertarget{classcounted__ptr}{\section{counted\-\_\-ptr$<$ T $>$ Class Template Reference}
+\label{classcounted__ptr}\index{counted\-\_\-ptr$<$ T $>$@{counted\-\_\-ptr$<$ T $>$}}
+}
+
+
+Classe gérant un \char`\"{}smart pointer\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$counted\-\_\-ptr.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcounted__ptr_afc15d9bc04c1be60099294037e9cbdc1}{counted\-\_\-ptr} (T $\ast$pointer=0)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual \hyperlink{classcounted__ptr_a8b23efee2c3349c85b0acb9cb0c02b88}{$\sim$counted\-\_\-ptr} ()
+\begin{DoxyCompactList}\small\item\em Destructeur, libère la donnée s'il s'agit du dernier pointeur qui la désigne. \end{DoxyCompactList}\item 
+\hyperlink{classcounted__ptr_a761e66ebb626a54888dd3f29093d02f2}{counted\-\_\-ptr} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr} \&smart\-Pointer)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie. \end{DoxyCompactList}\item 
+\hyperlink{classcounted__ptr}{counted\-\_\-ptr} \& \hyperlink{classcounted__ptr_a66a449e044736694d639c0077d1e1053}{operator=} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr} \&smart\-Pointer)
+\begin{DoxyCompactList}\small\item\em Opérateur d'affectation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\\hyperlink{classcounted__ptr_afcd57d6c61d5774e1397da21a0e2f875}{counted\-\_\-ptr} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ U $>$ \&smart\-Pointer)
+\begin{DoxyCompactList}\small\item\em Constructeur de transtypage. Permet de pointer sur une instance de classe U via un pointeur de type T, U héritant T. \end{DoxyCompactList}\item 
+bool \hyperlink{classcounted__ptr_a4d951309592e9186940afe98c07ed72e}{isnull} () const 
+\item 
+T \& \hyperlink{classcounted__ptr_aa7b22a5b53011b29dbebab1ec7acbe17}{operator$\ast$} () const 
+\begin{DoxyCompactList}\small\item\em Accès à la variable désignée par le pointeur. \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{classcounted__ptr_aa50f9c6eee8e60d42a8fa6fff232be6c}{operator-\/$>$} () const 
+\begin{DoxyCompactList}\small\item\em Opérateur d'accès aux attributs / méthodes de la variable pointée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcounted__ptr_a1e2f4d7eb63dd5757e9a3f2f701423a3}{acquerir} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ T $>$ \&cp)
+\item 
+{\footnotesize template$<$class U $>$ }\\void \hyperlink{classcounted__ptr_a895493d30acc074bcdb2debd4978427a}{acquerir} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ U $>$ \&cp)
+\item 
+void \hyperlink{classcounted__ptr_a0b9693015481176159f87f26e530409d}{liberer} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int $\ast$ \hyperlink{classcounted__ptr_abf02f680f71697211394ebdfb47f14ff}{m\-\_\-counter}
+\item 
+T $\ast$ \hyperlink{classcounted__ptr_adfc589214b83bdd53c7640d8374f1098}{m\-\_\-ptr}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class U $>$ }\\class \hyperlink{classcounted__ptr_abf29d1b6b221e60964e0852b2518841a}{counted\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em Donner à counted\-\_\-ptr$<$\-U$>$ accès à la partie privée de counted\-\_\-ptr$<$\-T$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class counted\-\_\-ptr$<$ T $>$}
+
+Classe gérant un \char`\"{}smart pointer\char`\"{}. 
+
+\begin{DoxyAuthor}{Author}
+Jean Christophe Engel, Fabrice Lamarche, University Of Rennes 1 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+23/04/2010 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcounted__ptr_afc15d9bc04c1be60099294037e9cbdc1}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!counted\-\_\-ptr@{counted\-\_\-ptr}}
+\index{counted\-\_\-ptr@{counted\-\_\-ptr}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{counted\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf counted\-\_\-ptr}$<$ T $>$\-::{\bf counted\-\_\-ptr} (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{pointer = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classcounted__ptr_afc15d9bc04c1be60099294037e9cbdc1}
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & Si non nul, un pointeur vers une variable allouée dynamiquement.\\
+\hline
+\end{DoxyParams}
+
+
+ \subsubsection*{méthodes publiques }\hypertarget{classcounted__ptr_a8b23efee2c3349c85b0acb9cb0c02b88}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!$\sim$counted\-\_\-ptr@{$\sim$counted\-\_\-ptr}}
+\index{$\sim$counted\-\_\-ptr@{$\sim$counted\-\_\-ptr}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{$\sim$counted\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf counted\-\_\-ptr}$<$ T $>$\-::$\sim${\bf counted\-\_\-ptr} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classcounted__ptr_a8b23efee2c3349c85b0acb9cb0c02b88}
+
+
+Destructeur, libère la donnée s'il s'agit du dernier pointeur qui la désigne. 
+
+\hypertarget{classcounted__ptr_a761e66ebb626a54888dd3f29093d02f2}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!counted\-\_\-ptr@{counted\-\_\-ptr}}
+\index{counted\-\_\-ptr@{counted\-\_\-ptr}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{counted\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf counted\-\_\-ptr}$<$ T $>$\-::{\bf counted\-\_\-ptr} (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ T $>$ \&}]{smart\-Pointer}
+\end{DoxyParamCaption}
+)}}\label{classcounted__ptr_a761e66ebb626a54888dd3f29093d02f2}
+
+
+Constructeur de copie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smart\-Pointer} & \-: le \char`\"{}smart pointer\char`\"{} à copier. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcounted__ptr_afcd57d6c61d5774e1397da21a0e2f875}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!counted\-\_\-ptr@{counted\-\_\-ptr}}
+\index{counted\-\_\-ptr@{counted\-\_\-ptr}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{counted\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ template$<$class U $>$ {\bf counted\-\_\-ptr}$<$ T $>$\-::{\bf counted\-\_\-ptr} (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ U $>$ \&}]{smart\-Pointer}
+\end{DoxyParamCaption}
+)}}\label{classcounted__ptr_afcd57d6c61d5774e1397da21a0e2f875}
+
+
+Constructeur de transtypage. Permet de pointer sur une instance de classe U via un pointeur de type T, U héritant T. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smart\-Pointer} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcounted__ptr_a1e2f4d7eb63dd5757e9a3f2f701423a3}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!acquerir@{acquerir}}
+\index{acquerir@{acquerir}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{acquerir}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf counted\-\_\-ptr}$<$ T $>$\-::acquerir (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ T $>$ \&}]{cp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classcounted__ptr_a1e2f4d7eb63dd5757e9a3f2f701423a3}
+\hypertarget{classcounted__ptr_a895493d30acc074bcdb2debd4978427a}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!acquerir@{acquerir}}
+\index{acquerir@{acquerir}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{acquerir}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ template$<$class U $>$ void {\bf counted\-\_\-ptr}$<$ T $>$\-::acquerir (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ U $>$ \&}]{cp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classcounted__ptr_a895493d30acc074bcdb2debd4978427a}
+\hypertarget{classcounted__ptr_a4d951309592e9186940afe98c07ed72e}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!isnull@{isnull}}
+\index{isnull@{isnull}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{isnull}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf counted\-\_\-ptr}$<$ T $>$\-::isnull (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classcounted__ptr_a4d951309592e9186940afe98c07ed72e}
+\begin{DoxyReturn}{Returns}
+vrai si le pointeur ne désigne rien 
+\end{DoxyReturn}
+\hypertarget{classcounted__ptr_a0b9693015481176159f87f26e530409d}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!liberer@{liberer}}
+\index{liberer@{liberer}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{liberer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf counted\-\_\-ptr}$<$ T $>$\-::liberer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classcounted__ptr_a0b9693015481176159f87f26e530409d}
+\hypertarget{classcounted__ptr_aa7b22a5b53011b29dbebab1ec7acbe17}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T \& {\bf counted\-\_\-ptr}$<$ T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classcounted__ptr_aa7b22a5b53011b29dbebab1ec7acbe17}
+
+
+Accès à la variable désignée par le pointeur. 
+
+\begin{DoxyReturn}{Returns}
+La variable désignée par le pointeur. 
+\end{DoxyReturn}
+\hypertarget{classcounted__ptr_aa50f9c6eee8e60d42a8fa6fff232be6c}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{operator-\/$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T $\ast$ {\bf counted\-\_\-ptr}$<$ T $>$\-::operator-\/$>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classcounted__ptr_aa50f9c6eee8e60d42a8fa6fff232be6c}
+
+
+Opérateur d'accès aux attributs / méthodes de la variable pointée. 
+
+\begin{DoxyReturn}{Returns}
+adresse de la variable désignée par le pointeur. 
+\end{DoxyReturn}
+\hypertarget{classcounted__ptr_a66a449e044736694d639c0077d1e1053}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!operator=@{operator=}}
+\index{operator=@{operator=}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf counted\-\_\-ptr}$<$ T $>$ \& {\bf counted\-\_\-ptr}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ T $>$ \&}]{smart\-Pointer}
+\end{DoxyParamCaption}
+)}}\label{classcounted__ptr_a66a449e044736694d639c0077d1e1053}
+
+
+Opérateur d'affectation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smart\-Pointer} & \-: l'opérande de droite de l'affectation. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classcounted__ptr_abf29d1b6b221e60964e0852b2518841a}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!counted\-\_\-ptr@{counted\-\_\-ptr}}
+\index{counted\-\_\-ptr@{counted\-\_\-ptr}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{counted\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ template$<$class U $>$ friend class {\bf counted\-\_\-ptr}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classcounted__ptr_abf29d1b6b221e60964e0852b2518841a}
+
+
+Donner à counted\-\_\-ptr$<$\-U$>$ accès à la partie privée de counted\-\_\-ptr$<$\-T$>$ 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classcounted__ptr_abf02f680f71697211394ebdfb47f14ff}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!m\-\_\-counter@{m\-\_\-counter}}
+\index{m\-\_\-counter@{m\-\_\-counter}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{m\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ unsigned int$\ast$ {\bf counted\-\_\-ptr}$<$ T $>$\-::m\-\_\-counter\hspace{0.3cm}{\ttfamily [private]}}}\label{classcounted__ptr_abf02f680f71697211394ebdfb47f14ff}
+\hypertarget{classcounted__ptr_adfc589214b83bdd53c7640d8374f1098}{\index{counted\-\_\-ptr@{counted\-\_\-ptr}!m\-\_\-ptr@{m\-\_\-ptr}}
+\index{m\-\_\-ptr@{m\-\_\-ptr}!counted_ptr@{counted\-\_\-ptr}}
+\subsubsection[{m\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf counted\-\_\-ptr}$<$ T $>$\-::m\-\_\-ptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classcounted__ptr_adfc589214b83bdd53c7640d8374f1098}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{counted__ptr_8h}{counted\-\_\-ptr.\-h}\end{DoxyCompactItemize}

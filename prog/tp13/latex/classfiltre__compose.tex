@@ -1,0 +1,142 @@
+\hypertarget{classfiltre__compose}{\section{filtre\-\_\-compose Class Reference}
+\label{classfiltre__compose}\index{filtre\-\_\-compose@{filtre\-\_\-compose}}
+}
+
+
+{\ttfamily \#include $<$filtre\-\_\-compose.\-h$>$}
+
+
+
+Inheritance diagram for filtre\-\_\-compose\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classfiltre__compose__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for filtre\-\_\-compose\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classfiltre__compose__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfiltre__compose_a7e3d377ce43f6dabc6709f57b9aaf4b6}{filtre\-\_\-compose} (unsigned int, unsigned int)
+\item 
+virtual void \hyperlink{classfiltre__compose_a7ac6503a5391d0f633203c0b094a6e9f}{connecter\-Composants} (\hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classproducteur}{producteur} $>$, unsigned int, \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classconsommateur}{consommateur} $>$, unsigned int)
+\item 
+void \hyperlink{classfiltre__compose_a8b205525be2ba74557c5284ed72406a2}{ajouter\-Composant} (\hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classcomposant}{composant} $>$)
+\item 
+void \hyperlink{classfiltre__compose_ad30c331895f65539dad8e62ed5fcfc04}{connecter\-Sortie\-Interne} (\hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classproducteur__base}{producteur\-\_\-base} $>$, unsigned int, unsigned int)
+\item 
+void \hyperlink{classfiltre__compose_ad9c8d2f971d2a71859fad598d11e180b}{connecter\-Entree\-Interne} (\hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classconsommateur__base}{consommateur\-\_\-base} $>$, unsigned int, unsigned int)
+\item 
+void \hyperlink{classfiltre__compose_aaf4dc84a41236fb7f462d6eba569baf1}{connecter\-Entree} (const \hyperlink{classcounted__ptr}{counted\-\_\-ptr}$<$ \hyperlink{classflot}{flot} $>$ \&, unsigned int)
+\item 
+virtual void \hyperlink{classfiltre__compose_a6fd1598c04300da43989af4f87a37aba}{calculer} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{classcounted__ptr}{counted\-\_\-ptr}\\*
+$<$ \hyperlink{classcomposant}{composant} $>$ $>$ \hyperlink{classfiltre__compose_ae857e33daea1b9afa3689322241dac33}{m\-\_\-filters}
+\item 
+std\-::map$<$ unsigned int, \\*
+std\-::pair$<$ \hyperlink{classcounted__ptr}{counted\-\_\-ptr}\\*
+$<$ \hyperlink{classconsommateur}{consommateur} $>$, unsigned int $>$ $>$ \hyperlink{classfiltre__compose_ab0a900380de582219751e3451104cfa7}{m\-\_\-dict}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classfiltre__compose_a7e3d377ce43f6dabc6709f57b9aaf4b6}{\index{filtre\-\_\-compose@{filtre\-\_\-compose}!filtre\-\_\-compose@{filtre\-\_\-compose}}
+\index{filtre\-\_\-compose@{filtre\-\_\-compose}!filtre_compose@{filtre\-\_\-compose}}
+\subsubsection[{filtre\-\_\-compose}]{\setlength{\rightskip}{0pt plus 5cm}filtre\-\_\-compose\-::filtre\-\_\-compose (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{in, }
+\item[{unsigned int}]{out}
+\end{DoxyParamCaption}
+)}}\label{classfiltre__compose_a7e3d377ce43f6dabc6709f57b9aaf4b6}
+Filtre composé de plusieurs composants reliés les uns les autres. in représente le nombre d'entrées out représente le nombre de sorties 
+
+\subsection{Member Function Documentation}
+\hypertarget{classfiltre__compose_a8b205525be2ba74557c5284ed72406a2}{\index{filtre\-\_\-compose@{filtre\-\_\-compose}!ajouter\-Composant@{ajouter\-Composant}}
+\index{ajouter\-Composant@{ajouter\-Composant}!filtre_compose@{filtre\-\_\-compose}}
+\subsubsection[{ajouter\-Composant}]{\setlength{\rightskip}{0pt plus 5cm}void filtre\-\_\-compose\-::ajouter\-Composant (
+\begin{DoxyParamCaption}
+\item[{{\bf counted\-\_\-ptr}$<$ {\bf composant} $>$}]{composant}
+\end{DoxyParamCaption}
+)}}\label{classfiltre__compose_a8b205525be2ba74557c5284ed72406a2}
+Ajoute un composant dans le filtre \hypertarget{classfiltre__compose_a6fd1598c04300da43989af4f87a37aba}{\index{filtre\-\_\-compose@{filtre\-\_\-compose}!calculer@{calculer}}
+\index{calculer@{calculer}!filtre_compose@{filtre\-\_\-compose}}
+\subsubsection[{calculer}]{\setlength{\rightskip}{0pt plus 5cm}void filtre\-\_\-compose\-::calculer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfiltre__compose_a6fd1598c04300da43989af4f87a37aba}
+Calcule les valeurs à sortir en traversant tous les composants et en appliquand les filtres. 
+
+Implements \hyperlink{classfiltre__base_ad06f5db1f851e5ad8655c9d8927cf347}{filtre\-\_\-base}.
+
+\hypertarget{classfiltre__compose_a7ac6503a5391d0f633203c0b094a6e9f}{\index{filtre\-\_\-compose@{filtre\-\_\-compose}!connecter\-Composants@{connecter\-Composants}}
+\index{connecter\-Composants@{connecter\-Composants}!filtre_compose@{filtre\-\_\-compose}}
+\subsubsection[{connecter\-Composants}]{\setlength{\rightskip}{0pt plus 5cm}void filtre\-\_\-compose\-::connecter\-Composants (
+\begin{DoxyParamCaption}
+\item[{{\bf counted\-\_\-ptr}$<$ {\bf producteur} $>$}]{prod, }
+\item[{unsigned int}]{out\-Prod, }
+\item[{{\bf counted\-\_\-ptr}$<$ {\bf consommateur} $>$}]{cons, }
+\item[{unsigned int}]{cons\-Prod}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfiltre__compose_a7ac6503a5391d0f633203c0b094a6e9f}
+Connecte deux composants internes ensemble. \hypertarget{classfiltre__compose_aaf4dc84a41236fb7f462d6eba569baf1}{\index{filtre\-\_\-compose@{filtre\-\_\-compose}!connecter\-Entree@{connecter\-Entree}}
+\index{connecter\-Entree@{connecter\-Entree}!filtre_compose@{filtre\-\_\-compose}}
+\subsubsection[{connecter\-Entree}]{\setlength{\rightskip}{0pt plus 5cm}void filtre\-\_\-compose\-::connecter\-Entree (
+\begin{DoxyParamCaption}
+\item[{const {\bf counted\-\_\-ptr}$<$ {\bf flot} $>$ \&}]{cmp, }
+\item[{unsigned int}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classfiltre__compose_aaf4dc84a41236fb7f462d6eba569baf1}
+Connecte un flot à une entrée du filtre 
+
+Reimplemented from \hyperlink{classconsommateur__base_a273d1899ba7e05e8651b4cca6aa35b1d}{consommateur\-\_\-base}.
+
+\hypertarget{classfiltre__compose_ad9c8d2f971d2a71859fad598d11e180b}{\index{filtre\-\_\-compose@{filtre\-\_\-compose}!connecter\-Entree\-Interne@{connecter\-Entree\-Interne}}
+\index{connecter\-Entree\-Interne@{connecter\-Entree\-Interne}!filtre_compose@{filtre\-\_\-compose}}
+\subsubsection[{connecter\-Entree\-Interne}]{\setlength{\rightskip}{0pt plus 5cm}void filtre\-\_\-compose\-::connecter\-Entree\-Interne (
+\begin{DoxyParamCaption}
+\item[{{\bf counted\-\_\-ptr}$<$ {\bf consommateur\-\_\-base} $>$}]{cmp, }
+\item[{unsigned int}]{in, }
+\item[{unsigned int}]{in\-Cmp}
+\end{DoxyParamCaption}
+)}}\label{classfiltre__compose_ad9c8d2f971d2a71859fad598d11e180b}
+Connecte une entrée d'un composant interne à une entrée du filtre cmp est le composant interne in l'entrée du filtre in\-Cmp l'entrée du composant \hypertarget{classfiltre__compose_ad30c331895f65539dad8e62ed5fcfc04}{\index{filtre\-\_\-compose@{filtre\-\_\-compose}!connecter\-Sortie\-Interne@{connecter\-Sortie\-Interne}}
+\index{connecter\-Sortie\-Interne@{connecter\-Sortie\-Interne}!filtre_compose@{filtre\-\_\-compose}}
+\subsubsection[{connecter\-Sortie\-Interne}]{\setlength{\rightskip}{0pt plus 5cm}void filtre\-\_\-compose\-::connecter\-Sortie\-Interne (
+\begin{DoxyParamCaption}
+\item[{{\bf counted\-\_\-ptr}$<$ {\bf producteur\-\_\-base} $>$}]{cmp, }
+\item[{unsigned int}]{out, }
+\item[{unsigned int}]{out\-Cmp}
+\end{DoxyParamCaption}
+)}}\label{classfiltre__compose_ad30c331895f65539dad8e62ed5fcfc04}
+Connecte une sortie d'un composant externe à une sortie du filtre cmp est le composant externe in la sortie du filtre in\-Cmp la sortie du composant 
+
+\subsection{Member Data Documentation}
+\hypertarget{classfiltre__compose_ab0a900380de582219751e3451104cfa7}{\index{filtre\-\_\-compose@{filtre\-\_\-compose}!m\-\_\-dict@{m\-\_\-dict}}
+\index{m\-\_\-dict@{m\-\_\-dict}!filtre_compose@{filtre\-\_\-compose}}
+\subsubsection[{m\-\_\-dict}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$unsigned int, std\-::pair$<${\bf counted\-\_\-ptr}$<${\bf consommateur}$>$, unsigned int$>$ $>$ filtre\-\_\-compose\-::m\-\_\-dict\hspace{0.3cm}{\ttfamily [private]}}}\label{classfiltre__compose_ab0a900380de582219751e3451104cfa7}
+Dictionnaire reliant un numéro d'entrée à une entrée d'un composant \hypertarget{classfiltre__compose_ae857e33daea1b9afa3689322241dac33}{\index{filtre\-\_\-compose@{filtre\-\_\-compose}!m\-\_\-filters@{m\-\_\-filters}}
+\index{m\-\_\-filters@{m\-\_\-filters}!filtre_compose@{filtre\-\_\-compose}}
+\subsubsection[{m\-\_\-filters}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf counted\-\_\-ptr}$<${\bf composant}$>$ $>$ filtre\-\_\-compose\-::m\-\_\-filters\hspace{0.3cm}{\ttfamily [private]}}}\label{classfiltre__compose_ae857e33daea1b9afa3689322241dac33}
+Liste des composants 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{filtre__compose_8h}{filtre\-\_\-compose.\-h}\item 
+src/\hyperlink{filtre__compose_8cpp}{filtre\-\_\-compose.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\hypertarget{classharmonique}{\section{harmonique Class Reference}
+\label{classharmonique}\index{harmonique@{harmonique}}
+}
+
+
+{\ttfamily \#include $<$harmonique.\-h$>$}
+
+
+
+Inheritance diagram for harmonique\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classharmonique__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for harmonique\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classharmonique__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classharmonique_ac4326b55d526129329391f36991e2f73}{harmonique} (double)
+\item 
+virtual \hyperlink{classharmonique_a48a057f7ba6e8ff4e443c15da0cd2019}{$\sim$harmonique} ()
+\item 
+virtual void \hyperlink{classharmonique_a4dbd729dfa443204d9834effbb63d816}{calculer} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classharmonique_a8f9a721707c36033703863f22d6b70a8}{m\-\_\-freq}
+\item 
+double \hyperlink{classharmonique_a2ba9d8b0702651bbbf67d4d7f7316c3e}{m\-\_\-dephase}
+\item 
+int \hyperlink{classharmonique_a648d5e64e0e8b8a5c9d4af4146ad93ae}{m\-\_\-sample\-\_\-counter}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classharmonique_ac4326b55d526129329391f36991e2f73}{\index{harmonique@{harmonique}!harmonique@{harmonique}}
+\index{harmonique@{harmonique}!harmonique@{harmonique}}
+\subsubsection[{harmonique}]{\setlength{\rightskip}{0pt plus 5cm}harmonique\-::harmonique (
+\begin{DoxyParamCaption}
+\item[{double}]{freq}
+\end{DoxyParamCaption}
+)}}\label{classharmonique_ac4326b55d526129329391f36991e2f73}
+Génère une harmonique (onde sinusoïdale) de fréquence freq \hypertarget{classharmonique_a48a057f7ba6e8ff4e443c15da0cd2019}{\index{harmonique@{harmonique}!$\sim$harmonique@{$\sim$harmonique}}
+\index{$\sim$harmonique@{$\sim$harmonique}!harmonique@{harmonique}}
+\subsubsection[{$\sim$harmonique}]{\setlength{\rightskip}{0pt plus 5cm}virtual harmonique\-::$\sim$harmonique (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classharmonique_a48a057f7ba6e8ff4e443c15da0cd2019}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classharmonique_a4dbd729dfa443204d9834effbb63d816}{\index{harmonique@{harmonique}!calculer@{calculer}}
+\index{calculer@{calculer}!harmonique@{harmonique}}
+\subsubsection[{calculer}]{\setlength{\rightskip}{0pt plus 5cm}void harmonique\-::calculer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classharmonique_a4dbd729dfa443204d9834effbb63d816}
+Calcule la prochaine valeur de la vague. 
+
+Implements \hyperlink{classproducteur__base_af1e171c9e69b0998d5124c7389737f82}{producteur\-\_\-base}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classharmonique_a2ba9d8b0702651bbbf67d4d7f7316c3e}{\index{harmonique@{harmonique}!m\-\_\-dephase@{m\-\_\-dephase}}
+\index{m\-\_\-dephase@{m\-\_\-dephase}!harmonique@{harmonique}}
+\subsubsection[{m\-\_\-dephase}]{\setlength{\rightskip}{0pt plus 5cm}double harmonique\-::m\-\_\-dephase\hspace{0.3cm}{\ttfamily [private]}}}\label{classharmonique_a2ba9d8b0702651bbbf67d4d7f7316c3e}
+Déphasage de l'harmonique N\-O\-T\-E\-: je devrais peut-\/être proposer de le passer en paramètre. \hypertarget{classharmonique_a8f9a721707c36033703863f22d6b70a8}{\index{harmonique@{harmonique}!m\-\_\-freq@{m\-\_\-freq}}
+\index{m\-\_\-freq@{m\-\_\-freq}!harmonique@{harmonique}}
+\subsubsection[{m\-\_\-freq}]{\setlength{\rightskip}{0pt plus 5cm}double harmonique\-::m\-\_\-freq\hspace{0.3cm}{\ttfamily [private]}}}\label{classharmonique_a8f9a721707c36033703863f22d6b70a8}
+Fréquence de l'harmonique \hypertarget{classharmonique_a648d5e64e0e8b8a5c9d4af4146ad93ae}{\index{harmonique@{harmonique}!m\-\_\-sample\-\_\-counter@{m\-\_\-sample\-\_\-counter}}
+\index{m\-\_\-sample\-\_\-counter@{m\-\_\-sample\-\_\-counter}!harmonique@{harmonique}}
+\subsubsection[{m\-\_\-sample\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int harmonique\-::m\-\_\-sample\-\_\-counter\hspace{0.3cm}{\ttfamily [private]}}}\label{classharmonique_a648d5e64e0e8b8a5c9d4af4146ad93ae}
+Compteur de samples déjà générés, utilisé pour la génération de l'onde 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{harmonique_8h}{harmonique.\-h}\item 
+src/\hyperlink{harmonique_8cpp}{harmonique.\-cpp}\end{DoxyCompactItemize}
